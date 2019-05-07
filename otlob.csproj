@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,10 +65,39 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Account.cs" />
+    <Compile Include="Classes\AccountFactory.cs" />
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Cart.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\DeliverdState.cs" />
+    <Compile Include="Classes\DeliveringState.cs" />
+    <Compile Include="Classes\FullMenu.cs" />
+    <Compile Include="Classes\MenuComponent.cs" />
+    <Compile Include="Classes\MenuItem.cs" />
+    <Compile Include="Classes\Notification.cs" />
+    <Compile Include="Classes\Order.cs" />
+    <Compile Include="Classes\OrderAdapter.cs" />
+    <Compile Include="Classes\OrderItem.cs" />
+    <Compile Include="Classes\OrderItemAdapter.cs" />
+    <Compile Include="Classes\PayingState.cs" />
+    <Compile Include="Classes\Resturant.cs" />
+    <Compile Include="Classes\SearchByCategory.cs" />
+    <Compile Include="Classes\SearchByLocation.cs" />
+    <Compile Include="Classes\SearchByName.cs" />
+    <Compile Include="Classes\SearchMethod.cs" />
+    <Compile Include="Classes\SectionItem.cs" />
+    <Compile Include="Classes\State.cs" />
+    <Compile Include="Classes\Subscriber.cs" />
+    <Compile Include="Classes\System.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\Register.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -92,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DataBaseSript\OtlobScript.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
