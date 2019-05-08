@@ -14,7 +14,7 @@ namespace Otlob_WPF_Project.Classes
         public string name { get; set; }
         public string email { get; set; }
         public string phoneNumber { get; set; }
-
+        public string address { get; set; }
         public int id { get; set; }
         public Cart cart{ get; set; }
         public Order order { get; set; }
@@ -22,6 +22,7 @@ namespace Otlob_WPF_Project.Classes
         public Account()
         {
             username = "";
+            address = "";
             password = "";
             name = "";
             email = "";
