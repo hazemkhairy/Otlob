@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class Order
+    public class Order
     {
         protected State state;
         protected List<OrderItem> items;

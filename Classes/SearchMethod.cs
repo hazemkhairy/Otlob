@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    interface SearchMethod
+    public interface SearchMethod
     {
          List<Resturant> search(List<Resturant> resturants, string tofind);
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class DeliveringState :State
+    public class DeliveringState :State
     {
         public DeliveringState(Order order) : base(order)
         {

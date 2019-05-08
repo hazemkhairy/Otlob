@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class Resturant
+    public class Resturant
     {
         public int id { get; set; }
         public string name { get; set; }
-        public MenuComponent menu{ get; set; }
+        public FullMenu menu{ get; set; }
         public string description { get; set; }
         public int rating { get; set; }
         public string phoneNumber{ get; set; }

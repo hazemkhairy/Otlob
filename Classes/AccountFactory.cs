@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class AccountFactory
+    public class AccountFactory
     {
         public AccountFactory()
         {

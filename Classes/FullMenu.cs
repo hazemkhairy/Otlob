@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class FullMenu : MenuComponent
+    public class FullMenu : MenuComponent
     {
         public List<MenuComponent> childern{ get; set; }
         

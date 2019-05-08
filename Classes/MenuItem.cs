@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class MenuItem :MenuComponent
+    public class MenuItem :MenuComponent
     {
         public double price{ get; set; }
         public string description { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    abstract class State
+    public abstract class State
     {
         protected Order order;
         public State()

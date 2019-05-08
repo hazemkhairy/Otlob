@@ -12,8 +12,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Oracle.DataAccess.Client;
-using Oracle.DataAccess.Types;
 using Otlob_WPF_Project.Classes;
 namespace Otlob_WPF_Project.Windows
 {

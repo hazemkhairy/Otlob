@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class System
+    public class System
     {
         public List<Resturant> resturants{ get; set; }
         public List<Account> accounts{ get; set; }

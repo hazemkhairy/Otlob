@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class Customer:Account
+    public class Customer :Account
     {
         public Customer()
         {

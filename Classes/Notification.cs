@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class Notification
+    public class Notification
     {
         public string text { get; set; }
         public Resturant from { get; set; }

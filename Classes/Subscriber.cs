@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    abstract class Subscriber
+    public abstract class Subscriber
     {
         
         public List<Notification> notifications { get;  }
