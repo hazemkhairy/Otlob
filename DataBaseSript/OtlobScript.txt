@@ -15,7 +15,8 @@ Rating Number not null,
 Name varchar2(20) not null,
 PhoneNumber varchar2(20) not null,
 Address varchar2(20)not null,
-ImagePath varchar2(50) not null
+ImagePath varchar2(50) not null,
+CategoryType varchar2(20) not null
 );
 create table Notification
 (
