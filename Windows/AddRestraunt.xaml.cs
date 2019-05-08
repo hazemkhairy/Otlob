@@ -19,13 +19,13 @@ namespace otlob.Windows
     /// </summary>
     public partial class AddRestraunt : Window
     {
-        public static Otlob_WPF_Project.Classes.Resturant newRestraunt ;
-        Otlob_WPF_Project.Classes.System system ;
+        public static otlob.Classes.Resturant newRestraunt ;
+        otlob.Classes.System system ;
         public AddRestraunt()
         {
             InitializeComponent();
-            system = Otlob_WPF_Project.Classes.System.getInstance();
-            newRestraunt = new Otlob_WPF_Project.Classes.Resturant();
+            system = otlob.Classes.System.getInstance();
+            newRestraunt = new otlob.Classes.Resturant();
             CategoryComboBox.Items.Add("Spicy");
             CityComboBox.Items.Add("Cairo");
             CountryComboBox.Items.Add("Egypt");

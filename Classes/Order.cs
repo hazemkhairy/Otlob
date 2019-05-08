@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Otlob_WPF_Project.Classes
+namespace otlob.Classes
 {
     public class Order
     {

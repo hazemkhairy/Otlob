@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Otlob_WPF_Project.Classes
+namespace otlob.Classes
 {
     public class FullMenu : MenuComponent
     {
@@ -18,15 +18,25 @@ namespace Otlob_WPF_Project.Classes
         {
             childern = sections;
         }
-        public void addChildern(MenuComponent child)
+        public virtual void addChildern(MenuComponent child)
         {
             if(!childern.Contains(child))
                 childern.Add(child);
         }
-        public void removeChildern(MenuComponent child)
+        public virtual void removeChildern(MenuComponent child)
         {
             if(childern.Contains(child))
                 childern.Remove(child);
+        }
+
+        public virtual MenuComponent getChildAt(int index)
+        {
+            return childern[index];
+        }
+
+        public virtual List<MenuComponent> getChildrens()
+        {
+            return childern;
         }
     }
 }
