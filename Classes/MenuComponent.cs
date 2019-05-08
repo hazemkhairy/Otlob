@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Otlob_WPF_Project.Classes
+namespace otlob.Classes
 {
     public interface MenuComponent
     {
+        void addChildern(MenuComponent child);
+        void removeChildern(MenuComponent child);
+        MenuComponent getChildAt(int index);
+        List<MenuComponent> getChildrens();
     }
 }

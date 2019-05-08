@@ -1,4 +1,4 @@
-﻿using Otlob_WPF_Project.Classes;
+﻿using otlob.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +27,7 @@ namespace otlob.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Otlob_WPF_Project.Classes.System system = Otlob_WPF_Project.Classes.System.getInstance();
+            otlob.Classes.System system = otlob.Classes.System.getInstance();
             bool found = false;
             for (int i = 0; i < system.accounts.Count; i++)
             {
@@ -51,7 +51,7 @@ namespace otlob.Windows
 
         private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var window = new Otlob_WPF_Project.Windows.Register();
+            var window = new otlob.Windows.Register();
             this.Hide();
             window.ShowDialog();
             this.Close();
