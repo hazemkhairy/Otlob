@@ -1,0 +1,28 @@
+﻿<Window x:Class="otlob.Windows.AddRestraunt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:otlob.Windows"
+        mc:Ignorable="d"
+        Title="AddRestraunt" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="RestrauntNameTextBox" HorizontalAlignment="Left" Height="23" Margin="291,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label Content="Restraunt Name :" HorizontalAlignment="Left" Margin="171,25,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CategoryComboBox" HorizontalAlignment="Left" Margin="291,71,0,0" VerticalAlignment="Top" Width="138" IsEditable="True"/>
+        <Label Content="Select Category :" HorizontalAlignment="Left" Margin="173,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.901,-0.297"/>
+        <TextBox x:Name="PhoneNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="291,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label Content="Phone Number :" HorizontalAlignment="Left" Margin="171,120,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address :" HorizontalAlignment="Left" Margin="173,172,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CountryComboBox" Text="Select Country" HorizontalAlignment="Left" Margin="291,175,0,0" VerticalAlignment="Top" Width="103"/>
+        <ComboBox x:Name="CityComboBox" Text="Select City"  HorizontalAlignment="Left" Margin="423,175,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Rating : " HorizontalAlignment="Left" Margin="173,227,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RatingComboBox" HorizontalAlignment="Left" Margin="291,230,0,0" VerticalAlignment="Top" Width="103" IsEditable="True"/>
+        <Label Content="Description :" HorizontalAlignment="Left" Margin="173,283,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.234,1.031"/>
+        <TextBox x:Name="DescirptionTextBox" HorizontalAlignment="Left" Height="23" Margin="291,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Button Content="Generate Restraunt Menu" HorizontalAlignment="Left" Margin="267,391,0,0" VerticalAlignment="Top" Width="208" Background="#FFF1F1F1" Click="Button_Click"/>
+        <TextBox x:Name="ImageUrlTextBox" HorizontalAlignment="Left" Height="23" Margin="291,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label Content="ImageUrl (Optional) :" HorizontalAlignment="Left" Margin="152,335,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

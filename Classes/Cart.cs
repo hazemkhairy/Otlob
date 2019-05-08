@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class Cart
+    public class Cart
     {
         public List<OrderItem> items{ get; set; }
         

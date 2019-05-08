@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class OrderAdapter :Order
+    public class OrderAdapter :Order
     {
         private Cart cart;
         public OrderAdapter():base()

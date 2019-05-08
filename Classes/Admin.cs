@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class Admin :Account
+    public class Admin :Account
     {
         public Admin()
         {

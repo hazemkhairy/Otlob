@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class SearchByCategory : SearchMethod
+    public class SearchByCategory : SearchMethod
     {
         public List<Resturant> search(List<Resturant> resturants, string tofind)
         {

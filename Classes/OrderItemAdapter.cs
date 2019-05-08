@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class OrderItemAdapter :OrderItem
+    public class OrderItemAdapter :OrderItem
     {
         public MenuItem menuItem { get; set; }
         OrderItemAdapter( MenuItem mi)

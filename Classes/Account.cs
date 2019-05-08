@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    abstract class Account : Subscriber
+    public abstract class Account : Subscriber
     {
 
         public string username { get; set; }

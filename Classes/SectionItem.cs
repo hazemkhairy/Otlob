@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Otlob_WPF_Project.Classes
 {
-    class SectionItem : FullMenu
+    public class SectionItem : FullMenu
     {
         public string sectionName { get; set; }
         public SectionItem()
