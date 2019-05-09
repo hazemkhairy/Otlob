@@ -1,0 +1,41 @@
+﻿<Window x:Class="otlob.Windows.ViewRestaurantMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:otlob.Windows"
+        mc:Ignorable="d"
+        Title="ViewRestaurantMenu" Height="auto" Width="auto">
+    <DockPanel>
+        <DockPanel x:Name="MenuPanel" DockPanel.Dock="Left" Width="auto">
+            <DockPanel DockPanel.Dock="Top" x:Name="RestaurantInfoPanel">
+            
+            </DockPanel>
+            
+            <ScrollViewer >
+                <StackPanel DockPanel.Dock="Top" x:Name="MenuSections">
+            
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
+        <DockPanel x:Name="CartPanel" DockPanel.Dock="Left" Background="LightGreen" Width="auto">
+            <DockPanel DockPanel.Dock="Top">
+                <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Right" Text="log Out" FontSize="20" FontFamily="Segoe UI Black"  TextDecorations="Underline"  Cursor="Hand" x:Name="LogOut" MouseDown="LogOut_MouseDown" Margin="5"></TextBlock>
+            <TextBlock Text="CART" FontSize="28" FontFamily="Segoe UI Black" FontWeight="Bold" TextDecorations="Underline" DockPanel.Dock="Right" TextAlignment="Center"/>
+            </DockPanel>
+            <ScrollViewer DockPanel.Dock="Top" Height="auto">
+                <StackPanel  x:Name="ItemsInCart">
+                    
+
+                </StackPanel>
+            </ScrollViewer>
+            <Button  DockPanel.Dock="top" VerticalAlignment="Bottom" Height="50" Margin="10" Width="auto" Click="Button_Click">
+                <Button.Content>
+                    <TextBlock Text="Place Order"  FontSize="28" FontFamily="Segoe UI Black" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center">
+                        
+                    </TextBlock>
+                </Button.Content>
+            </Button>
+        </DockPanel>
+    </DockPanel>
+</Window>

@@ -34,12 +34,12 @@ namespace otlob.Classes
 
         protected int quantity;
 
-        public int Getquantity()
+        public virtual int Getquantity()
         {
             return quantity;
         }
 
-        public void Setquantity(int value)
+        public virtual void Setquantity(int value)
         {
             quantity = value;
         }

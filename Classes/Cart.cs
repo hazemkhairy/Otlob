@@ -20,19 +20,41 @@ namespace otlob.Classes
         }
         public void addItem(OrderItem  oi)
         {
-            if(items.Contains(oi))
+            for (int i = 0; i < items.Count; i++)
             {
-                items[items.IndexOf(oi)].Setquantity(items[items.IndexOf(oi)].Getquantity() + oi.Getquantity() );
+                if (items[i].GetName() == oi.GetName())
+                {
+                    items[i].Setquantity(items[i].Getquantity() + oi.Getquantity());
+                    return;
+                }
             }
-            else
+            
                 items.Add(oi);
         }
-        public void removeItem(OrderItem oi)
+        public void removeOneFromItemFromCart(OrderItem oi)
         {
-            if (items.Contains(oi))
+            for (int i = 0; i < items.Count; i++)
             {
-                items.Remove(oi);
+                if (items[i].GetName() == oi.GetName())
+                {
+                    items[i].Setquantity(items[i].Getquantity() - 1);
+                    if(items[i].Getquantity() == 0)
+                        items.RemoveAt(i);
+                    return;
+                }
             }
+        }
+        public void removeItemFromCart(OrderItem oi)
+        {
+            for(int i = 0; i < items.Count; i++)
+            {
+                if (items[i].GetName() == oi.GetName())
+                {
+                    items.RemoveAt(i);
+                    return;
+                }
+            }
+            
         }
     }
 }

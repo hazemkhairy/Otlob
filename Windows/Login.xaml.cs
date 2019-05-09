@@ -26,12 +26,11 @@ namespace otlob.Windows
         public Login()
         {
             InitializeComponent();
+
             system = otlob.Classes.System.getInstance();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

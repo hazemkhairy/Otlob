@@ -44,6 +44,15 @@ namespace otlob.Classes
         {
             this.state = state;
         }
+        public virtual double getTotalPrice()
+        {
+            double ret = 0;
+            for (int i = 0; i < items.Count; i++)
+            {
+                ret += (items[i].Getquantity() * items[i].Getprice());
+            }
+            return ret;
+        }
         public virtual List<OrderItem> getItems()
         {
             return items;

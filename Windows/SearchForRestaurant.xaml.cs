@@ -31,8 +31,18 @@ namespace otlob.Windows
             SearchMethodComboBox.Items.Add("Category");
             SearchMethodComboBox.Items.Add("Location");
             SearchMethodComboBox.SelectedItem = SearchMethodComboBox.Items[0];
-
-            otlobSystem.resturants.Add(new Resturant { name ="bashandy",description="ay" ,categoryType="asian"});
+            Resturant temp = new Resturant { name = "bashandy", description = "ay", categoryType = "asian" };
+            SectionItem sectionItem = new SectionItem { sectionName = "sandwitches" };
+            sectionItem.addChildern(new Classes.MenuItem { name = "kebda", price = 25, description = "sandwitch spice", likes = 12 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "sgo2", price = 25, description = "sandwitch spice awi", likes = 1 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "burger", price = 45, description = "sandwitch hady", likes = 50 });
+            temp.menu.addChildern(sectionItem);
+            temp.menu.addChildern(new SectionItem { sectionName = "pizza" });
+            temp.menu.addChildern(new SectionItem { sectionName = "crep" });
+            temp.menu.addChildern(new SectionItem { sectionName = "sandwitches" });
+            temp.menu.addChildern(new SectionItem { sectionName = "pizza" });
+            temp.menu.addChildern(new SectionItem { sectionName = "crep" });
+            otlobSystem.resturants.Add(temp);
             otlobSystem.resturants.Add(new Resturant { name = "hazem", description = "ay", categoryType = "italian" });
             otlobSystem.resturants.Add(new Resturant { name = "ali", description = "ay", categoryType = "egyptian" });
             otlobSystem.resturants.Add(new Resturant { name = "omar", description = "ay", categoryType = "western" });
@@ -82,8 +92,19 @@ namespace otlob.Windows
         private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             targetRestaurant= ((ResturantDisplayPanel )sender).target;
-            MessageBox.Show(targetRestaurant.name);
+
+            ViewRestaurantMenu temp = new ViewRestaurantMenu();
+            this.Hide();
+            temp.ShowDialog();
+            this.Close();
             
+        }
+        private void LogOut_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

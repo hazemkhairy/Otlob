@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="otlob.UserControls.MenuItemPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:otlob.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="125" d:DesignWidth="500">
+    <DockPanel Margin="2" Background="White" MouseEnter="DockPanel_MouseEnter" MouseLeave="DockPanel_MouseLeave" Cursor="Hand" >
+        <DockPanel DockPanel.Dock="Left" Width="100" Height="100" Margin="10">
+            <Image x:Name="MenuItemImage">
+
+            </Image>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Left" Margin="10" Width="200">
+            <TextBlock x:Name="MenuItemName" DockPanel.Dock="Top" Height="25"></TextBlock>
+            <TextBlock x:Name="MenuItemDescription" DockPanel.Dock="Top" Height="25"></TextBlock>
+            <TextBlock x:Name="MenuItemPrice" DockPanel.Dock="Top" Height="25"></TextBlock>
+            <TextBlock x:Name="MenuItemLikes" DockPanel.Dock="Top" Height="25"></TextBlock>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Left" Margin="10" Cursor="Hand"  >
+            
+            <Image Source="addButton.png" x:Name="addButtonImage" DockPanel.Dock="Top" Margin="10" >
+
+            </Image>
+        </DockPanel>
+        
+    </DockPanel>
+</UserControl>

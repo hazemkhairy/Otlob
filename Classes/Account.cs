@@ -60,13 +60,14 @@ namespace otlob.Classes
         }
         public void removeFromCart(OrderItem oi)
         {
-            cart.removeItem(oi);
+            cart.removeItemFromCart(oi);
         }
         public void placeOrder()
         {
             OrderAdapter adapter = new OrderAdapter();
             adapter.setCart(cart);
             order=adapter;
+            
         }
     }
 }
