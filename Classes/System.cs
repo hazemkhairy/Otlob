@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
-namespace Otlob_WPF_Project.Classes
+namespace otlob.Classes
 {
     public class System
     {
@@ -306,7 +306,7 @@ namespace Otlob_WPF_Project.Classes
             }
             dr.Close();
         }
-        private Otlob_WPF_Project.Classes.Resturant getRestraunt(int id)
+        private otlob.Classes.Resturant getRestraunt(int id)
         {
             for (int i = 0; i < resturants.Count; i++)
             {
@@ -324,7 +324,7 @@ namespace Otlob_WPF_Project.Classes
             OracleDataReader dr = getRestraunts.ExecuteReader();
             while (dr.Read())
             {
-                Otlob_WPF_Project.Classes.Resturant temp = new Resturant();
+                otlob.Classes.Resturant temp = new Resturant();
                 temp.address = dr["address"].ToString();
                 temp.description = dr["Description"].ToString();
                 temp.categoryType = dr["CategoryType"].ToString();
@@ -336,7 +336,7 @@ namespace Otlob_WPF_Project.Classes
             }
             dr.Close();
         }
-        private void AddMenuToRestraunt(Otlob_WPF_Project.Classes.Resturant temp)
+        private void AddMenuToRestraunt(otlob.Classes.Resturant temp)
         {
             temp.menu = new FullMenu();
 
@@ -349,7 +349,7 @@ namespace Otlob_WPF_Project.Classes
             OracleDataReader dr1 = cmd1.ExecuteReader();
             while (dr1.Read())
             {
-                Otlob_WPF_Project.Classes.SectionItem section = new Otlob_WPF_Project.Classes.SectionItem();
+                otlob.Classes.SectionItem section = new otlob.Classes.SectionItem();
                 section.sectionName = dr1["name"].ToString();
                 AddSectionItems(section, Convert.ToInt32(dr1["ID"].ToString()),temp.id);
                 Sections.Add(section);
@@ -357,7 +357,7 @@ namespace Otlob_WPF_Project.Classes
             dr1.Close();
             temp.menu.childern = Sections;
         }
-        private void AddSectionItems(Otlob_WPF_Project.Classes.SectionItem section, int sectionid,int resid)
+        private void AddSectionItems(otlob.Classes.SectionItem section, int sectionid,int resid)
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
@@ -369,7 +369,7 @@ namespace Otlob_WPF_Project.Classes
             List<MenuComponent> SectionItems = new List<MenuComponent>();
             while (dr.Read())
             {
-                Otlob_WPF_Project.Classes.MenuItem item = new Otlob_WPF_Project.Classes.MenuItem();
+                otlob.Classes.MenuItem item = new otlob.Classes.MenuItem();
                 item.description = dr["Description"].ToString();
                 item.imagePath = dr["imagepath"].ToString();
                 item.name = dr["name"].ToString();

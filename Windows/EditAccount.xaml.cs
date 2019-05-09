@@ -19,11 +19,11 @@ namespace otlob.Windows
     /// </summary>
     public partial class EditAccount : Window
     {
-        Otlob_WPF_Project.Classes.System system;
+        otlob.Classes.System system;
         public EditAccount()
         {
             InitializeComponent();
-            system = Otlob_WPF_Project.Classes.System.getInstance();
+            system = otlob.Classes.System.getInstance();
             AddressTextBox.Text = Login.LogedAccount.address;
             PhoneNumberTextBox.Text = Login.LogedAccount.phoneNumber;
         }

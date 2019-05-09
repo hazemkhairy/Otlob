@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using Otlob_WPF_Project.Classes;
+using otlob.Classes;
 namespace otlob
 {
     /// <summary>
@@ -15,14 +15,14 @@ namespace otlob
     {
         private void Application_Exit(object sender, ExitEventArgs e)
         {
-            Otlob_WPF_Project.Classes.System system = Otlob_WPF_Project.Classes.System.getInstance();
+            otlob.Classes.System system = otlob.Classes.System.getInstance();
             system.CommitDataToDataBase();
         }
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
 
-            Otlob_WPF_Project.Classes.System system = Otlob_WPF_Project.Classes.System.getInstance();
+            otlob.Classes.System system = otlob.Classes.System.getInstance();
             system.FetchDataFromDataBase();
         }
     }

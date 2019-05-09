@@ -1,4 +1,4 @@
-﻿using Otlob_WPF_Project.Classes;
+﻿using otlob.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +22,11 @@ namespace otlob.Windows
     public partial class Login : Window
     {
         public static Account LogedAccount;
-        Otlob_WPF_Project.Classes.System system;
+        otlob.Classes.System system;
         public Login()
         {
             InitializeComponent();
-            system = Otlob_WPF_Project.Classes.System.getInstance();
+            system = otlob.Classes.System.getInstance();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ namespace otlob.Windows
 
         private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var window = new Otlob_WPF_Project.Windows.Register();
+            var window = new otlob.Windows.Register();
             this.Hide();
             window.ShowDialog();
             this.Close();

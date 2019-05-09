@@ -79,6 +79,9 @@
     <Compile Include="Windows\AddRestraunt.xaml.cs">
       <DependentUpon>AddRestraunt.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\EditAccount.xaml.cs">
+      <DependentUpon>EditAccount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,10 @@
     <Page Include="Windows\AddRestraunt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EditAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\Login.xaml">
       <SubType>Designer</SubType>
