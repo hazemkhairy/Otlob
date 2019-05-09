@@ -28,8 +28,8 @@ namespace otlob.Windows
             InitializeComponent();
 
             targetRestaurant = SearchForRestaurant.targetRestaurant;
-            //LoggedAccount = Login.LogedAccount;
-            LoggedAccount = new Customer();
+            LoggedAccount = Login.LogedAccount;
+            //LoggedAccount = new Customer();
             fillRestaurantInfoPanel();
             fillSectionsPanels();
         }

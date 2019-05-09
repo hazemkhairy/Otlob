@@ -18,5 +18,6 @@
         <Label Content="Password : " HorizontalAlignment="Left" Margin="208,91,0,0" VerticalAlignment="Top"/>
         <Label Content="Address : " HorizontalAlignment="Left" Margin="208,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.104,0.065"/>
         <Label Content="Phone Number : " HorizontalAlignment="Left" Margin="208,190,0,0" VerticalAlignment="Top"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>

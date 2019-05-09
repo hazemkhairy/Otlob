@@ -44,5 +44,13 @@ namespace otlob.Windows
                 MessageBox.Show("Please Enter Data To Edit");
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Profile window = new Profile();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
+        }
     }
 }

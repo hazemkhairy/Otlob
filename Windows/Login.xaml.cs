@@ -37,10 +37,13 @@ namespace otlob.Windows
             LogedAccount = system.loginValidation(EmailTextBox.Text, PasswordTextBox.Password);
             if (LogedAccount != null)
             {
-                var profile = new otlob.Windows.Profile();
+                
+
+                var profile = new otlob.Windows.MainMenu();
                 this.Hide();
                 profile.ShowDialog();
                 this.Close();
+                
             }
             else
             {

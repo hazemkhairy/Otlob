@@ -61,51 +61,51 @@ namespace otlob.Classes
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "insert into account values(:id,:email,:name,:number,:password,:address)";
+                cmd.CommandText = "insert into account values(:accountid,:accountemail,:accountname,:accountnumber,:accountpass,:accaddress)";
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("id", accounts[i].id);
-                cmd.Parameters.Add("email", accounts[i].email);
-                cmd.Parameters.Add("name", accounts[i].name);
-                cmd.Parameters.Add("number", accounts[i].phoneNumber);
-                cmd.Parameters.Add("password", accounts[i].password);
-                cmd.Parameters.Add("address", accounts[i].address);
+                cmd.Parameters.Add("accountid", accounts[i].id);
+                cmd.Parameters.Add("accountemail", accounts[i].email);
+                cmd.Parameters.Add("accountname", accounts[i].name);
+                cmd.Parameters.Add("accountnumber", accounts[i].phoneNumber);
+                cmd.Parameters.Add("accountpass", accounts[i].password);
+                cmd.Parameters.Add("accaddress", accounts[i].address);
                 cmd.ExecuteNonQuery();
                 for (int j = 0; j < accounts[i].notifications.Count; j++)
                 {
                     OracleCommand cmd2 = new OracleCommand();
                     cmd2.Connection = conn;
-                    cmd2.CommandText = "insert into notification values (:id,:accountid,:restrauntid,:text,:state)";
+                    cmd2.CommandText = "insert into notification values (:not_id,:not_accountid,:not_restrauntid,:not_text,:not_state)";
                     cmd2.CommandType = CommandType.Text;
-                    cmd2.Parameters.Add("id", accounts[i].notifications[j].id);
-                    cmd2.Parameters.Add("accountid", accounts[i].id);
-                    cmd2.Parameters.Add("restrauntid", accounts[i].notifications[j].from.id);
-                    cmd2.Parameters.Add("text", accounts[i].notifications[j].text);
-                    cmd2.Parameters.Add("state", accounts[i].notifications[j].readed.ToString());
+                    cmd2.Parameters.Add("not_id", accounts[i].notifications[j].id);
+                    cmd2.Parameters.Add("not_accountid", accounts[i].id);
+                    cmd2.Parameters.Add("not_restrauntid", accounts[i].notifications[j].from.id);
+                    cmd2.Parameters.Add("not_text", accounts[i].notifications[j].text);
+                    cmd2.Parameters.Add("not_state", accounts[i].notifications[j].readed.ToString());
                 }
             }
             for (int i = 0; i < resturants.Count; i++)
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "insert into restraunt values(:id,:description,:rating,:name,:number,:address,:ImagePath,:category)";
+                cmd.CommandText = "insert into restraunt values(:res_id,:res_description,:res_rating,:res_name,:res_number,:res_address,:res_ImagePath,:res_category)";
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("id", resturants[i].id);
-                cmd.Parameters.Add("description", resturants[i].description);
-                cmd.Parameters.Add("rating", resturants[i].rating);
-                cmd.Parameters.Add("name", resturants[i].name);
-                cmd.Parameters.Add("number", resturants[i].phoneNumber);
-                cmd.Parameters.Add("address", resturants[i].address);
-                cmd.Parameters.Add("ImagePath", resturants[i].imagePath);
-                cmd.Parameters.Add("category", resturants[i].categoryType);
+                cmd.Parameters.Add("res_id", resturants[i].id);
+                cmd.Parameters.Add("res_description", resturants[i].description);
+                cmd.Parameters.Add("res_rating", resturants[i].rating);
+                cmd.Parameters.Add("res_name", resturants[i].name);
+                cmd.Parameters.Add("res_number", resturants[i].phoneNumber);
+                cmd.Parameters.Add("res_address", resturants[i].address);
+                cmd.Parameters.Add("res_ImagePath", resturants[i].imagePath);
+                cmd.Parameters.Add("res_category", resturants[i].categoryType);
                 cmd.ExecuteNonQuery();
                 for (int j = 0; j < resturants[i].subscibers.Count; j++)
                 {
                     OracleCommand cmd2 = new OracleCommand();
                     cmd2.Connection = conn;
-                    cmd2.CommandText = "insert into restrauntsubscribers values (:accountid,:restrauntid)";
+                    cmd2.CommandText = "insert into restrauntsubscribers values (:sub_accountid,:sub_restrauntid)";
                     cmd2.CommandType = CommandType.Text;
-                    cmd2.Parameters.Add("accountid", resturants[i].subscibers[j].id);
-                    cmd2.Parameters.Add("restrauntid", resturants[i].id);
+                    cmd2.Parameters.Add("sub_accountid", resturants[i].subscibers[j].id);
+                    cmd2.Parameters.Add("sub_restrauntid", resturants[i].id);
                 }
 
                 for (int j = 0; j < resturants[i].menu.childern.Count; j++)
@@ -113,30 +113,28 @@ namespace otlob.Classes
                     SectionItem sectionItem = (SectionItem)resturants[i].menu.childern[j];
                     OracleCommand cmd3 = new OracleCommand();
                     cmd3.Connection = conn;
-                    cmd3.CommandText = "insert into MenuSection values(:id,:name,:restrauntid)";
+                    cmd3.CommandText = "insert into MenuSection values(:sec_id,:sec_name,:sec_restrauntid)";
                     cmd3.CommandType = CommandType.Text;
-                    cmd3.Parameters.Add("id", j);
-                    cmd3.Parameters.Add("name", sectionItem.sectionName);
-                    cmd3.Parameters.Add("restrauntid", resturants[i].id);
+                    cmd3.Parameters.Add("sec_id", j);
+                    cmd3.Parameters.Add("sec_name", sectionItem.sectionName);
+                    cmd3.Parameters.Add("sec_restrauntid", resturants[i].id);
                     cmd3.ExecuteNonQuery();
 
                     for (int k = 0; k < sectionItem.childern.Count;k++)
                     {
-                        
-
                         Classes.MenuItem menuItem = (Classes.MenuItem)sectionItem.childern[j];
                         OracleCommand cmd4 = new OracleCommand();
                         cmd4.Connection = conn;
-                        cmd4.CommandText = "insert into MenuItem values(:id,:price,:imagepath,:description,:name,:rating,:menuSection_id,:restrauntid)";
+                        cmd4.CommandText = "insert into MenuItem values(:mi_id,:mi_price,:mi_imagepath,:mi_description,:mi_name,:mi_rating,:mi_menuSection_id,:mi_restrauntid)";
                         cmd4.CommandType = CommandType.Text;
-                        cmd4.Parameters.Add("id", k);
-                        cmd4.Parameters.Add("price", menuItem.price);
-                        cmd4.Parameters.Add("imagepath", menuItem.imagePath);
-                        cmd4.Parameters.Add("description", menuItem.description);
-                        cmd4.Parameters.Add("name", menuItem.name);
-                        cmd4.Parameters.Add("rating", menuItem.rating);
-                        cmd4.Parameters.Add("menuSection_id", j);
-                        cmd4.Parameters.Add("restrauntid", resturants[i].id);
+                        cmd4.Parameters.Add("mi_id", k);
+                        cmd4.Parameters.Add("mi_price", menuItem.price);
+                        cmd4.Parameters.Add("mi_imagepath", menuItem.imagePath);
+                        cmd4.Parameters.Add("mi_description", menuItem.description);
+                        cmd4.Parameters.Add("mi_name", menuItem.name);
+                        cmd4.Parameters.Add("mi_rating", menuItem.likes);
+                        cmd4.Parameters.Add("mi_menuSection_id", j);
+                        cmd4.Parameters.Add("mi_restrauntid", resturants[i].id);
                         cmd4.ExecuteNonQuery();
                     }
 
@@ -161,11 +159,6 @@ namespace otlob.Classes
             cmd2.CommandText = "delete from MenuSection";
             cmd2.CommandType = CommandType.Text;
             cmd2.ExecuteNonQuery();
-            OracleCommand cmd3 = new OracleCommand();
-            cmd3.Connection = conn;
-            cmd3.CommandText = "delete from Menu";
-            cmd3.CommandType = CommandType.Text;
-            cmd3.ExecuteNonQuery();
             OracleCommand cmd4 = new OracleCommand();
             cmd4.Connection = conn;
             cmd4.CommandText = "delete from notification";
@@ -374,7 +367,7 @@ namespace otlob.Classes
                 item.imagePath = dr["imagepath"].ToString();
                 item.name = dr["name"].ToString();
                 item.price = Convert.ToInt32(dr["price"].ToString());
-                item.rating = Convert.ToInt32(dr["rating"].ToString());
+                item.likes  = Convert.ToInt32(dr["rating"].ToString());
                 SectionItems.Add(item);
             }
             dr.Close();
