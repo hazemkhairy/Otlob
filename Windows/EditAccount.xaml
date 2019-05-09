@@ -22,5 +22,6 @@
         <PasswordBox x:Name="OldPasswordTextBox" HorizontalAlignment="Left" Margin="317,40,0,0" VerticalAlignment="Top" Width="150" Height="23"/>
         <PasswordBox x:Name="NewPasswordTextBox" HorizontalAlignment="Left" Margin="318,85,0,0" VerticalAlignment="Top" Width="150" Height="23"/>
         <PasswordBox x:Name="ConfirmPasswordTextBox" HorizontalAlignment="Left" Margin="318,131,0,0" VerticalAlignment="Top" Width="150" Height="23"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
     </Grid>
 </Window>

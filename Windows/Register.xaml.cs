@@ -56,5 +56,13 @@ namespace otlob.Windows
                 MessageBox.Show("this info is already used");
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new otlob.Windows.Login();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -39,5 +39,13 @@ namespace otlob.Windows
             window.ShowDialog();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var window = new otlob.Windows.MainMenu();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
+        }
     }
 }

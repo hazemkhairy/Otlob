@@ -26,22 +26,20 @@ namespace otlob.Windows
             InitializeComponent();
             system = otlob.Classes.System.getInstance();
             newRestraunt = new otlob.Classes.Resturant();
-            CategoryComboBox.Items.Add("Spicy");
-            CityComboBox.Items.Add("Cairo");
-            CountryComboBox.Items.Add("Egypt");
             for (int i = 0; i < 5; i++)
             {
                 RatingComboBox.Items.Add(i + 1);
             }
-            //load categories
-            //load countries and cities
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //validate lel input 
-            newRestraunt.address = CountryComboBox.SelectedItem.ToString()+" "+CityComboBox.SelectedItem.ToString();
-            newRestraunt.categoryType = CategoryComboBox.SelectedItem.ToString();
+            if (AddressTextBox.Text == "" || CategoryTextBox.Text == "" || DescirptionTextBox.Text == "" || RestrauntNameTextBox.Text == "" || PhoneNumberTextBox.Text == "" || RatingComboBox.SelectedIndex == -1)
+                MessageBox.Show("Please Fill All The Data");
+            else
+            {
+            newRestraunt.address = AddressTextBox.Text;
+            newRestraunt.categoryType = CategoryTextBox.Text;
             newRestraunt.description = DescirptionTextBox.Text;
             newRestraunt.name = RestrauntNameTextBox.Text;
             newRestraunt.phoneNumber = PhoneNumberTextBox.Text;
@@ -52,7 +50,15 @@ namespace otlob.Windows
             this.Hide();
             AddMenu.ShowDialog();
             this.Close();
-            //go to add menu form
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainMenu login = new MainMenu();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -31,7 +31,8 @@ namespace otlob.Windows
             SearchMethodComboBox.Items.Add("Category");
             SearchMethodComboBox.Items.Add("Location");
             SearchMethodComboBox.SelectedItem = SearchMethodComboBox.Items[0];
-            Resturant temp = new Resturant { name = "bashandy", description = "ay", categoryType = "asian" };
+
+            /*Resturant temp = new Resturant { name = "bashandy", description = "ay", categoryType = "asian" };
             SectionItem sectionItem = new SectionItem { sectionName = "sandwitches" };
             sectionItem.addChildern(new Classes.MenuItem { name = "kebda", price = 25, description = "sandwitch spice", likes = 12 });
             sectionItem.addChildern(new Classes.MenuItem { name = "sgo2", price = 25, description = "sandwitch spice awi", likes = 1 });
@@ -47,7 +48,8 @@ namespace otlob.Windows
             otlobSystem.resturants.Add(new Resturant { name = "ali", description = "ay", categoryType = "egyptian" });
             otlobSystem.resturants.Add(new Resturant { name = "omar", description = "ay", categoryType = "western" });
             otlobSystem.resturants.Add(new Resturant { name = "alaa", description = "ay", categoryType = "mexico" });
-            fillResultPanel();
+    */        
+    fillResultPanel();
 
             
         }

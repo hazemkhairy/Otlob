@@ -50,9 +50,22 @@ namespace otlob.Windows
             newItem.description = ItemDescription.Text;
             newItem.imagePath = ImagePathTextBox.Text;
             newItem.name = ItemNameTextBox.Text;
-            newItem.price = Convert.ToInt32(ItemPriceTextBox.Text);
+            newItem.price = Convert.ToDouble(ItemPriceTextBox.Text);
             newItem.likes =Convert.ToInt32(ItemRatingComboBox.SelectedItem.ToString());
             AddRestraunt.newRestraunt.menu.childern[ItemSectionComboBox.SelectedIndex].addChildern(newItem);
+            ItemDescription.Clear();
+            ItemNameTextBox.Clear();
+            ItemPriceTextBox.Clear();
+            ItemRatingComboBox.SelectedIndex = -1;
+            MessageBox.Show("Added item :)");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var window = new otlob.Windows.MainMenu();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
         }
     }
 }
