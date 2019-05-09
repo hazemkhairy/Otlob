@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:otlob.Windows"
         mc:Ignorable="d"
         Title="AddMenu" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="-2,0,1.6,0">
         <TextBox x:Name="SectionNameTextBox" HorizontalAlignment="Left" Height="24" Margin="253,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
         <Label Content="Section Name :" HorizontalAlignment="Left" Margin="140,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.01,0.031"/>
         <Button x:Name="AddSectionButton" Content="Add Section" HorizontalAlignment="Left" Margin="416,15,0,0" VerticalAlignment="Top" Width="75" Background="#FFDCD9D9" Click="AddSectionButton_Click"/>

@@ -29,20 +29,32 @@ namespace Otlob_WPF_Project.Windows
 
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
-            OtlobSystem.addNewUser("CUSTOMER");
-            int index = OtlobSystem.accounts.Count - 1;
-            OtlobSystem.accounts[index].email = EmailTextBox.Text;
-            OtlobSystem.accounts[index].name = NameTextBox.Text;
-            OtlobSystem.accounts[index].password = PasswordTextBox.Password;
-            OtlobSystem.accounts[index].phoneNumber = PhoneNumberTextBox.Text;
+            Account newaccount = OtlobSystem.accountFactory.getAccount("customer");
+            newaccount.address = AddressTextBox.Text;
+            newaccount.email = EmailTextBox.Text;
+            newaccount.password = PasswordTextBox.Password;
+            newaccount.name = NameTextBox.Text;
+            newaccount.phoneNumber = PhoneNumberTextBox.Text;
             int id = 0;
             for (int i = 0; i < OtlobSystem.accounts.Count; i++)
             {
                 id = Math.Max(id, OtlobSystem.accounts[i].id);
             }
             id += 1;
-            OtlobSystem.accounts[index].id = id;
-            MessageBox.Show("Added Account :)");
+            newaccount.id = id;
+            if (OtlobSystem.accountRegistrationValidation(newaccount))
+            {
+                OtlobSystem.accounts.Add(newaccount);
+                MessageBox.Show("Added Account :)");
+                var Login = new otlob.Windows.Login();
+                this.Hide();
+                Login.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("this info is already used");
+            }
         }
     }
 }
