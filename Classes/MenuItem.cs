@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Otlob_WPF_Project.Classes
+namespace otlob.Classes
 {
     public class MenuItem :MenuComponent
     {
@@ -20,6 +20,26 @@ namespace Otlob_WPF_Project.Classes
             name = "";
             rating = 0;
             imagePath = "";
+        }
+
+        public void addChildern(MenuComponent child)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void removeChildern(MenuComponent child)
+        {
+            throw new NotImplementedException();
+        }
+
+        public MenuComponent getChildAt(int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<MenuComponent> getChildrens()
+        {
+            throw new NotImplementedException();
         }
     }
 }

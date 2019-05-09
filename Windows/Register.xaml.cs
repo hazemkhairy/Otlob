@@ -12,8 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Otlob_WPF_Project.Classes;
-namespace Otlob_WPF_Project.Windows
+using otlob.Classes;
+namespace otlob.Windows
 {
     /// <summary>
     /// Interaction logic for Register.xaml

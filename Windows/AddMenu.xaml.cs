@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Otlob_WPF_Project.Classes;
+using otlob.Classes;
 using otlob.Windows;
 namespace otlob.Windows
 {
@@ -20,12 +20,12 @@ namespace otlob.Windows
     /// </summary>
     public partial class AddMenu : Window
     {
-        Otlob_WPF_Project.Classes.System system ;
+        otlob.Classes.System system ;
         public AddMenu()
         {
             InitializeComponent();
-            system = Otlob_WPF_Project.Classes.System.getInstance();
-            AddRestraunt.newRestraunt.menu = new Otlob_WPF_Project.Classes.FullMenu();
+            system = otlob.Classes.System.getInstance();
+            AddRestraunt.newRestraunt.menu = new otlob.Classes.FullMenu();
             for (int i = 0; i < 5; i++)
                 ItemRatingComboBox.Items.Add(i + 1);
         }
@@ -46,13 +46,13 @@ namespace otlob.Windows
         {
             if (ItemSectionComboBox.SelectedIndex == -1)
                 return;
-            Otlob_WPF_Project.Classes.MenuItem newItem = new Otlob_WPF_Project.Classes.MenuItem();
+            otlob.Classes.MenuItem newItem = new otlob.Classes.MenuItem();
             newItem.description = ItemDescription.Text;
             newItem.imagePath = ImagePathTextBox.Text;
             newItem.name = ItemNameTextBox.Text;
             newItem.price = Convert.ToInt32(ItemPriceTextBox.Text);
             newItem.rating =Convert.ToInt32(ItemRatingComboBox.SelectedItem.ToString());
-            ((SectionItem)AddRestraunt.newRestraunt.menu.childern[ItemSectionComboBox.SelectedIndex]).addChildern(newItem);
+            AddRestraunt.newRestraunt.menu.childern[ItemSectionComboBox.SelectedIndex].addChildern(newItem);
         }
     }
 }
