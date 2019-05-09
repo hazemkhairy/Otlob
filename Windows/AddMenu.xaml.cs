@@ -51,7 +51,7 @@ namespace otlob.Windows
             newItem.imagePath = ImagePathTextBox.Text;
             newItem.name = ItemNameTextBox.Text;
             newItem.price = Convert.ToInt32(ItemPriceTextBox.Text);
-            newItem.rating =Convert.ToInt32(ItemRatingComboBox.SelectedItem.ToString());
+            newItem.likes =Convert.ToInt32(ItemRatingComboBox.SelectedItem.ToString());
             AddRestraunt.newRestraunt.menu.childern[ItemSectionComboBox.SelectedIndex].addChildern(newItem);
         }
     }

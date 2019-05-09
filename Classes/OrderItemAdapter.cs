@@ -9,10 +9,12 @@ namespace otlob.Classes
     public class OrderItemAdapter :OrderItem
     {
         public MenuItem menuItem { get; set; }
-        OrderItemAdapter( MenuItem mi)
+        public OrderItemAdapter( MenuItem mi)
         {
             menuItem = mi;
-            
+            name = mi.name;
+            price = mi.price;
+            quantity = 1;
         }
         public override string GetName()
         {
@@ -31,6 +33,15 @@ namespace otlob.Classes
         {
             return menuItem.price;
         }
-        
+        public override  int Getquantity()
+        {
+            return quantity;
+        }
+
+        public override  void Setquantity(int value)
+        {
+            quantity = value;
+        }
+
     }
 }

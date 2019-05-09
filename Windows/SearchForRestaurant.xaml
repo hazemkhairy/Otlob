@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:otlob.Windows"
         mc:Ignorable="d"
         Title="SearchForRestaurant" Height="450" Width="800">
-    <DockPanel x:Name="mypanel">
-        <DockPanel DockPanel.Dock="Top" >
+    <StackPanel x:Name="mypanel">
+        <DockPanel  >
             <DockPanel >
                 <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search Value :" VerticalAlignment="Top"/>
                 <TextBox DockPanel.Dock="Top" x:Name="inputTextBox" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="320" BorderThickness="2" TextChanged="inputTextBox_TextChanged"/>
@@ -17,10 +17,11 @@
                 <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search Method :" VerticalAlignment="Top"/>
                 <ComboBox DockPanel.Dock="Top" x:Name="SearchMethodComboBox" SelectionChanged="SearchMethodComboBox_SelectionChanged" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" Height="20"/>
             </DockPanel>
+            <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Right" Text="log Out" FontSize="20" FontFamily="Segoe UI Black"  TextDecorations="Underline"  Cursor="Hand" x:Name="LogOut" MouseDown="LogOut_MouseDown" Margin="5"></TextBlock>
         </DockPanel>
 
-        <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Height="357" Canvas.Top="53" >
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Height="350" Margin="10,10,0,0" VerticalAlignment="Top" Width="750" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"  x:Name="displayPanel" DockPanel.Dock="Top">
+        <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Height="360"  >
+            <StackPanel Orientation="Vertical"  Height="auto" Margin="10,10,0,0"  Width="auto" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"  x:Name="displayPanel" DockPanel.Dock="Top">
                 <StackPanel.Effect>
                     <DropShadowEffect/>
                 </StackPanel.Effect>
@@ -29,5 +30,5 @@
         </ScrollViewer>
 
 
-    </DockPanel>
+    </StackPanel>
 </Window>

@@ -22,6 +22,15 @@ namespace otlob.Classes
         {
             this.cart = cart;
         }
+        public override double getTotalPrice()
+        {
+            double ret = 0;
+            for (int i = 0; i < cart.items.Count; i++)
+            {
+                ret += ( cart.items[i].Getquantity()* cart.items[i].Getprice());
+            }
+            return ret;
+        }
         public override List<OrderItem> getItems()
         {
             return cart.items;
