@@ -66,4 +66,26 @@ create table RestrauntSubscribers
   foreign key (Account_ID) references Account(ID),
   foreign key (Restraunt_ID) references Restraunt(ID),
   primary key(Account_ID,Restraunt_ID)
+);
+create table MenuSection
+(
+ID number not null,
+Name varchar2(20) not null,
+Restraunt_ID number not null,
+foreign key (Restraunt_ID) references Restraunt(ID),
+primary key(ID,Restraunt_ID)
+);
+create table MenuItem
+(
+  ID number not null,
+  Price number not null,
+  ImagePath varchar2(50) not null,
+  Description varchar2(50) not null,
+  Name varchar2(20) not null,
+  Rating number not null,
+  
+  MenuSection_ID number not null,
+  Restraunt_ID not null,
+  foreign key(MenuSection_ID,Restraunt_ID) references MenuSection(ID,Restraunt_ID),
+  primary key(ID,MenuSection_ID,Restraunt_ID)
 );*/

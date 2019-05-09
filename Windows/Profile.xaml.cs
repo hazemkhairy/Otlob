@@ -26,10 +26,18 @@ namespace otlob.Windows
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            NameDisplay.Text = otlob.Windows.Login.LogedAccount.name;
-            EmailDisplay.Text = otlob.Windows.Login.LogedAccount.email;
-            PhoneDisplay.Text = otlob.Windows.Login.LogedAccount.phoneNumber;
-            AddressDisplay.Text = otlob.Windows.Login.LogedAccount.address;
+            NameDisplay.Content = otlob.Windows.Login.LogedAccount.name;
+            EmailDisplay.Content = otlob.Windows.Login.LogedAccount.email;
+            PhoneNumberDisplay.Content = otlob.Windows.Login.LogedAccount.phoneNumber;
+            AddressDisplay.Content = otlob.Windows.Login.LogedAccount.address;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new otlob.Windows.EditAccount();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
         }
     }
 }
