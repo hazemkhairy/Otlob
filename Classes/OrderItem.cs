@@ -43,16 +43,7 @@ namespace otlob.Classes
         {
             quantity = value;
         }
-        protected Resturant resturant;
-        public Resturant getResturant()
-        {
-            return resturant;
-        }
-
-        public void setResturant(Resturant value)
-        {
-            resturant = value;
-        }
+        
         public void increaseQuantity(int q)
         {
             Setquantity(Getquantity() + q);

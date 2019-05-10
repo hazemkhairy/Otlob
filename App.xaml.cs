@@ -16,14 +16,14 @@ namespace otlob
         private void Application_Exit(object sender, ExitEventArgs e)
         {
             otlob.Classes.System system = otlob.Classes.System.getInstance();
-            system.CommitDataToDataBase();
+            //system.CommitDataToDataBase();
         }
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
 
             otlob.Classes.System system = otlob.Classes.System.getInstance();
-            system.FetchDataFromDataBase();
+            //system.FetchDataFromDataBase();
         }
     }
 }

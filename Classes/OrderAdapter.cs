@@ -39,6 +39,14 @@ namespace otlob.Classes
         {
             cart.items=items;
         }
+        public override void setResturant(Resturant value)
+        {
+            cart.setResturant(  value );
+        }
+        public override Resturant getResturant()
+        {
+            return cart.getResturant();
+        }
 
     }
 }

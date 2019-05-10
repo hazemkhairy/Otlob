@@ -1,0 +1,45 @@
+﻿<Window x:Class="otlob.Windows.TrackOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:otlob.Windows"
+        mc:Ignorable="d"
+        Title="TrackOrder" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition >
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*">
+
+            </RowDefinition>
+            <RowDefinition Height="1*">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="OrderPanel" Background="LightBlue" Width="auto" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock DockPanel.Dock="Top" Text="Order" FontSize="28" FontFamily="Segoe UI Black" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center"/>
+            <ScrollViewer>
+                <StackPanel DockPanel.Dock="Top"  x:Name="ItemsInOrder">
+
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
+        <DockPanel Grid.Row="1"  Grid.ColumnSpan="2">
+
+            <DockPanel DockPanel.Dock="Left" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Margin="10">
+                <TextBlock Text="Order State : " ></TextBlock>
+                <TextBlock Text="State"  x:Name="StateTextBox"></TextBlock>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Left" Grid.Column="1">
+                <ProgressBar x:Name="StateProgressBar" Height="20" VerticalAlignment="Center"  Width="auto" Margin="10" />
+
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>

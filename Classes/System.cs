@@ -69,7 +69,27 @@ namespace otlob.Classes
                 cmd.Parameters.Add("accountnumber", accounts[i].phoneNumber);
                 cmd.Parameters.Add("accountpass", accounts[i].password);
                 cmd.Parameters.Add("accaddress", accounts[i].address);
+
                 cmd.ExecuteNonQuery();
+
+                if(accounts[i] is Admin )
+                {
+                    OracleCommand cmd2 = new OracleCommand();
+                    cmd2.Connection = conn;
+                    cmd2.CommandText = "insert into admin values(:adminId)";
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.Parameters.Add("adminId", accounts[i].id);
+
+                }
+                else
+                {
+                    OracleCommand cmd2 = new OracleCommand();
+                    cmd2.Connection = conn;
+                    cmd2.CommandText = "insert into customer values(:adminId)";
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.Parameters.Add("adminId", accounts[i].id);
+                }
+
                 for (int j = 0; j < accounts[i].notifications.Count; j++)
                 {
                     OracleCommand cmd2 = new OracleCommand();
@@ -171,6 +191,16 @@ namespace otlob.Classes
             cmd5.ExecuteNonQuery();
             OracleCommand cmd6 = new OracleCommand();
             cmd6.Connection = conn;
+            cmd6.CommandText = "delete from Admin";
+            cmd6.CommandType = CommandType.Text;
+            cmd6.ExecuteNonQuery();
+            OracleCommand cmd7 = new OracleCommand();
+            cmd6.Connection = conn;
+            cmd6.CommandText = "delete from Customer";
+            cmd6.CommandType = CommandType.Text;
+            cmd6.ExecuteNonQuery();
+            OracleCommand cmd8 = new OracleCommand();
+            cmd6.Connection = conn;
             cmd6.CommandText = "delete from Account";
             cmd6.CommandType = CommandType.Text;
             cmd6.ExecuteNonQuery();
@@ -206,9 +236,28 @@ namespace otlob.Classes
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select * from Account";
+            cmd.CommandText = "select ac.email , ac.address , ac.id , ac.name , ac.password , ac.phonenumber from account ac , admin ad where ac.id = ad.id";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Account tempaccount = accountFactory.getAccount("admin");
+                tempaccount.email = dr["email"].ToString();
+                tempaccount.id = Convert.ToInt32(dr["id"].ToString());
+                tempaccount.name = dr["name"].ToString();
+                tempaccount.password = dr["password"].ToString();
+                tempaccount.address = dr["address"].ToString();
+                tempaccount.phoneNumber = dr["phonenumber"].ToString();
+                AddNotifications(tempaccount);
+                accounts.Add(tempaccount);
+            }
+            dr.Close();
+
+            cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "select ac.email , ac.address , ac.id , ac.name , ac.password , ac.phonenumber from account ac , customer cu where ac.id = cu.id";
+            cmd.CommandType = CommandType.Text;
+            dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 Account tempaccount = accountFactory.getAccount("customer");
@@ -221,8 +270,8 @@ namespace otlob.Classes
                 AddNotifications(tempaccount);
                 accounts.Add(tempaccount);
             }
-            AddSubscribersToRestraunts();
             dr.Close();
+            AddSubscribersToRestraunts();
         }
         private void AddSubscribersToRestraunts()
         {

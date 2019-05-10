@@ -9,9 +9,12 @@ namespace otlob.Classes
     public abstract class State
     {
         protected Order order;
+        public String StateName { get; set; }
+        
         public State()
         {
             order = new Order();
+            StateName = "";
         }
         public State(Order order)
         {

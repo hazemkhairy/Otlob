@@ -22,13 +22,17 @@ namespace otlob.Windows
     public partial class ViewRestaurantMenu : Window
     {
         public static Resturant targetRestaurant;
-        public Account LoggedAccount;
+        public static Account LoggedAccount;
         public ViewRestaurantMenu()
         {
             InitializeComponent();
-
+            LoggedAccount = new Customer();
+            if (Login.LogedAccount != null)
+                LoggedAccount = Login.LogedAccount;
+            targetRestaurant = new Resturant();
+            if(SearchForRestaurant.targetRestaurant!=null)
             targetRestaurant = SearchForRestaurant.targetRestaurant;
-            LoggedAccount = Login.LogedAccount;
+            LoggedAccount.cart.setResturant(targetRestaurant);
             //LoggedAccount = new Customer();
             fillRestaurantInfoPanel();
             fillSectionsPanels();
@@ -118,13 +122,33 @@ namespace otlob.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if(LoggedAccount.cart.items.Count==0)
+            {
+                MessageBox.Show("Please add items to cart to place order");
+                    return;
+
+            }
             LoggedAccount.placeOrder();
-            MessageBox.Show(LoggedAccount.order.getTotalPrice().ToString());
+            TrackOrder window = new TrackOrder();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
+            //MessageBox.Show(LoggedAccount.order.getTotalPrice().ToString());
         }
 
         
 
-        private void LogOut_MouseDown(object sender, MouseButtonEventArgs e)
+        
+
+        private void BackBTN_Click(object sender, RoutedEventArgs e)
+        {
+            SearchForRestaurant window = new SearchForRestaurant();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
+        }
+
+        private void LogOutBTN_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();
             this.Hide();

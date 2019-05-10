@@ -12,13 +12,25 @@ namespace otlob.Classes
         protected List<OrderItem> items;
         protected DateTime initDate;
         protected DateTime deliveredDate;
+        protected Resturant resturant;
 
-        public Order() {
+        public Order()
+        {
             items = new List<OrderItem>();
             initDate = new DateTime();
             deliveredDate = new DateTime();
-            state = new PayingState(this);
+            state = new DeliveringOrderToRestaurantState(this);
         }
+        public virtual Resturant getResturant()
+        {
+            return resturant;
+        }
+
+        public virtual void setResturant(Resturant value)
+        {
+            resturant = value;
+        }
+        
 
         public DateTime getInitDate()
         {

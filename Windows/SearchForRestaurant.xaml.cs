@@ -32,11 +32,16 @@ namespace otlob.Windows
             SearchMethodComboBox.Items.Add("Location");
             SearchMethodComboBox.SelectedItem = SearchMethodComboBox.Items[0];
 
-            /*Resturant temp = new Resturant { name = "bashandy", description = "ay", categoryType = "asian" };
+            Resturant temp = new Resturant { name = "bashandy", description = "ay", categoryType = "asian" };
             SectionItem sectionItem = new SectionItem { sectionName = "sandwitches" };
             sectionItem.addChildern(new Classes.MenuItem { name = "kebda", price = 25, description = "sandwitch spice", likes = 12 });
             sectionItem.addChildern(new Classes.MenuItem { name = "sgo2", price = 25, description = "sandwitch spice awi", likes = 1 });
-            sectionItem.addChildern(new Classes.MenuItem { name = "burger", price = 45, description = "sandwitch hady", likes = 50 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "burgwer", price = 145, description = "sandwitch hady", likes = 50 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "burager", price = 45, description = "sandwitch hady", likes = 50 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "burgesr", price = 425, description = "sandwitch hady", likes = 50 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "burg12er", price = 45, description = "sandwitch hady", likes = 50 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "bur11ger", price = 45, description = "sandwitch hady", likes = 50 });
+            sectionItem.addChildern(new Classes.MenuItem { name = "bu22rger", price = 45, description = "sandwitch hady", likes = 50 });
             temp.menu.addChildern(sectionItem);
             temp.menu.addChildern(new SectionItem { sectionName = "pizza" });
             temp.menu.addChildern(new SectionItem { sectionName = "crep" });
@@ -48,8 +53,12 @@ namespace otlob.Windows
             otlobSystem.resturants.Add(new Resturant { name = "ali", description = "ay", categoryType = "egyptian" });
             otlobSystem.resturants.Add(new Resturant { name = "omar", description = "ay", categoryType = "western" });
             otlobSystem.resturants.Add(new Resturant { name = "alaa", description = "ay", categoryType = "mexico" });
-    */        
-    fillResultPanel();
+            otlobSystem.resturants.Add(new Resturant { name = "alaa1", description = "ay", categoryType = "mexico" });
+            otlobSystem.resturants.Add(new Resturant { name = "alaa3", description = "ay", categoryType = "mexico" });
+            otlobSystem.resturants.Add(new Resturant { name = "alaa2", description = "ay", categoryType = "mexico" });
+            otlobSystem.resturants.Add(new Resturant { name = "alaa4", description = "ay", categoryType = "mexico" });
+
+            fillResultPanel();
 
             
         }
@@ -102,6 +111,21 @@ namespace otlob.Windows
             
         }
         private void LogOut_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+        }
+        private void BackBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu window = new MainMenu();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
+        }
+
+        private void LogOutBTN_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();
             this.Hide();

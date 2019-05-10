@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace otlob.Classes
 {
-    public class DeliverdState :State
+    class DeliveredOrderState : State
     {
-        public DeliverdState(Order order) : base(order)
+        public DeliveredOrderState(Order order) : base(order)
         {
             this.order = order;
+            this.order.setDeliveredDate(DateTime.Now);
+
+            StateName = "Order Delivered";
         }
         public override void nextState()
         {
-            this.order.setDeliveredDate(DateTime.Now);
+            
         }
     }
 }

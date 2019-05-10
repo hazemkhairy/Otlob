@@ -9,7 +9,18 @@ namespace otlob.Classes
     public class Cart
     {
         public List<OrderItem> items{ get; set; }
-        
+
+        protected Resturant resturant;
+
+        public Resturant getResturant()
+        {
+            return resturant;
+        }
+
+        public void setResturant(Resturant value)
+        {
+            resturant = value;
+        }
         public Cart()
         {
             items = new List<OrderItem>();

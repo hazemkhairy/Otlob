@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="Register" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="306,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="194"/>
-        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="23" Margin="306,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="194"/>
-        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="307,99,0,0" VerticalAlignment="Top" Width="194"/>
-        <TextBox x:Name="AddressTextBox" HorizontalAlignment="Left" Height="23" Margin="306,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
-        <TextBox x:Name="PhoneNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="307,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="306,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="194"  MaxLength="30"/>
+        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="23" Margin="306,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="194"  MaxLength="30"/>
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="307,99,0,0" VerticalAlignment="Top" Width="194"  MaxLength="30"/>
+        <TextBox x:Name="AddressTextBox" HorizontalAlignment="Left" Height="23" Margin="306,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"  MaxLength="30"/>
+        <TextBox x:Name="PhoneNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="307,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"  MaxLength="30"/>
         <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Margin="307,258,0,0" RenderTransformOrigin="1.017,3.75" Click="Register_Button_Click"/>
         <Label Content="Name : " HorizontalAlignment="Left" Margin="208,7,0,0" VerticalAlignment="Top" Width="59"/>
         <Label Content="Email : " HorizontalAlignment="Left" Margin="208,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.125,0.063"/>

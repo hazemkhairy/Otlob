@@ -7,6 +7,18 @@ PhoneNumber varchar2(30) NOT NULL,
 PassWord varchar2(30) not null,
 Address varchar2 (30) not null
 );
+create table Admin
+(
+ID number not null,
+Foreign key (ID) References Account(ID),
+primary key(ID)
+);
+create table Customer
+(
+ID number not null,
+Foreign key (ID) References Account(ID),
+primary key(ID)
+);
 create table Restraunt
 (
 ID number primary key,
@@ -28,36 +40,6 @@ Foreign key(Account_ID) References Account(ID),
 Restraunt_ID number not null,
 Foreign key (Restraunt_ID) References Restraunt(ID),
 primary key(ID,Account_ID,Restraunt_ID)
-);
-create table Menu
-(
-  ID number not null,
-  Restraunt_ID number not null,
-  Foreign Key (Restraunt_ID) references Restraunt(ID),
-  primary key(ID,Restraunt_ID)
-);
-create table MenuSection
-(
-ID number not null,
-Name varchar2(20) not null,
-Menu_ID number not null,
-Restraunt_ID number not null,
-foreign key (Menu_ID,Restraunt_ID) references Menu(ID,Restraunt_ID),
-primary key(ID,Menu_ID,Restraunt_ID)
-);
-create table Menutem
-(
-  ID number not null,
-  Price number not null,
-  ImagePath varchar2(50) not null,
-  Description varchar2(50) not null,
-  Name varchar2(20) not null,
-  Rating number not null,
-  MenuSection_ID number not null,
-  Menu_ID number not null,
-  Restraunt_ID not null,
-  foreign key(MenuSection_ID,Menu_ID,Restraunt_ID) references MenuSection(ID,Menu_ID,Restraunt_ID),
-  primary key(ID,MenuSection_ID,Menu_ID,Restraunt_ID)
 );
 create table RestrauntSubscribers
 (

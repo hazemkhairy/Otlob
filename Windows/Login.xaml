@@ -12,10 +12,10 @@
             <ColumnDefinition Width="324*"/>
             <ColumnDefinition Width="313*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="18" Margin="159.8,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="18" Margin="159.8,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2" Grid.Column="1"  MaxLength="30"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="85.8,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.078,-0.062" Grid.Column="1"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="85.8,59,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="159.8,67,0,0" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="159.8,67,0,0" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2" Grid.Column="1"  MaxLength="30"/>
         <Button Content="Login" HorizontalAlignment="Left" Margin="159.8,108,0,0" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2" Click="Button_Click" Grid.Column="1"/>
         <Label Cursor="Hand" Content="Don't have an account? Register." HorizontalAlignment="Left" Margin="159.8,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.562" Width="199" Grid.ColumnSpan="2" FontWeight="Bold" MouseLeftButtonUp="Label_MouseLeftButtonUp" Grid.Column="1"/>
     </Grid>

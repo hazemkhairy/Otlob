@@ -15,6 +15,7 @@ namespace otlob.Classes
             name = mi.name;
             price = mi.price;
             quantity = 1;
+            
         }
         public override string GetName()
         {
