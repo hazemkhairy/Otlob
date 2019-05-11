@@ -31,7 +31,7 @@ namespace otlob.Windows
             SearchMethodComboBox.Items.Add("Category");
             SearchMethodComboBox.Items.Add("Location");
             SearchMethodComboBox.SelectedItem = SearchMethodComboBox.Items[0];
-
+            /*
             Resturant temp = new Resturant { name = "bashandy", description = "ay", categoryType = "asian" };
             SectionItem sectionItem = new SectionItem { sectionName = "sandwitches" };
             sectionItem.addChildern(new Classes.MenuItem { name = "kebda", price = 25, description = "sandwitch spice", likes = 12 });
@@ -58,7 +58,7 @@ namespace otlob.Windows
             otlobSystem.resturants.Add(new Resturant { name = "alaa3", description = "ay", categoryType = "mexico" });
             otlobSystem.resturants.Add(new Resturant { name = "alaa2", description = "ay", categoryType = "mexico" });
             otlobSystem.resturants.Add(new Resturant { name = "alaa4", description = "ay", categoryType = "mexico" });
-
+            */
             fillResultPanel();
 
             
@@ -103,13 +103,11 @@ namespace otlob.Windows
 
         private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            targetRestaurant= ((ResturantDisplayPanel )sender).target;
-
+            targetRestaurant = ((ResturantDisplayPanel )sender).target;
             ViewRestaurantMenu temp = new ViewRestaurantMenu();
             this.Hide();
             temp.ShowDialog();
             this.Close();
-            
         }
         private void LogOut_MouseDown(object sender, MouseButtonEventArgs e)
         {

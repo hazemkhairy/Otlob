@@ -1,0 +1,31 @@
+﻿<Window x:Class="otlob.Windows.AddRestrauntOffer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:otlob.Windows"
+        mc:Ignorable="d"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="AddRestrauntOffer" Height="450" Width="800">
+    <Grid>
+        <ComboBox Name="RestrauntsComboBox" Width ="300" Margin="224,65,269.6,315" SelectionChanged="RestrauntsComboBox_SelectionChanged" Height="40" >
+
+        </ComboBox>
+        <ComboBox Name="RestrauntSectionsComboBox" Width ="300" Margin="224,142,269.6,237" Height="41" >
+
+        </ComboBox>
+        <TextBox Name="DiscountAmount" HorizontalAlignment="Left" Height="35" Margin="224,222,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300"/>
+        <Button Name="SubmitOffer" Content="Submit Offer" HorizontalAlignment="Left" Margin="224,326,0,0" VerticalAlignment="Top" Width="300" Click="SubmitOffer_Click"/>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="BackButton_Click" Margin="10,10,0,0"/>
+        <Label Content="Select Restraunt :" HorizontalAlignment="Left" Margin="61,79,0,0" VerticalAlignment="Top"/>
+        <Label Content="Select Menu Section :" HorizontalAlignment="Left" Margin="61,157,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enter Discount % :" HorizontalAlignment="Left" Margin="61,231,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

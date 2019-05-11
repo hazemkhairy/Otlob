@@ -7,21 +7,21 @@
         mc:Ignorable="d"
         Title="AddRestraunt" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="RestrauntNameTextBox" HorizontalAlignment="Left" Height="23" Margin="291,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
-        <Label Content="Restraunt Name :" HorizontalAlignment="Left" Margin="171,25,0,0" VerticalAlignment="Top"/>
-        <Label Content="Select Category :" HorizontalAlignment="Left" Margin="173,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.901,-0.297"/>
-        <TextBox x:Name="PhoneNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="291,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
-        <Label Content="Phone Number :" HorizontalAlignment="Left" Margin="171,120,0,0" VerticalAlignment="Top"/>
-        <Label Content="Address :" HorizontalAlignment="Left" Margin="173,172,0,0" VerticalAlignment="Top"/>
-        <Label Content="Rating : " HorizontalAlignment="Left" Margin="173,227,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="RatingComboBox" HorizontalAlignment="Left" Margin="291,230,0,0" VerticalAlignment="Top" Width="138" IsEditable="True"/>
-        <Label Content="Description :" HorizontalAlignment="Left" Margin="173,283,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.234,1.031"/>
-        <TextBox x:Name="DescirptionTextBox" HorizontalAlignment="Left" Height="23" Margin="291,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="200"/>
-        <Button Content="Generate Restraunt Menu" HorizontalAlignment="Left" Margin="267,391,0,0" VerticalAlignment="Top" Width="208" Background="#FFF1F1F1" Click="Button_Click"/>
-        <TextBox x:Name="ImageUrlTextBox" HorizontalAlignment="Left" Height="23" Margin="291,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="50"/>
-        <Label Content="ImageUrl (Optional) :" HorizontalAlignment="Left" Margin="152,335,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="AddressTextBox" HorizontalAlignment="Left" Height="23" Margin="291,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
-        <TextBox x:Name="CategoryTextBox" HorizontalAlignment="Left" Height="23" Margin="291,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
+        <TextBox x:Name="RestrauntNameTextBox" HorizontalAlignment="Left" Height="23" Margin="303,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
+        <Label Content="Restraunt Name :" HorizontalAlignment="Left" Margin="147,16,0,0" VerticalAlignment="Top"/>
+        <Label Content="Select Category :" HorizontalAlignment="Left" Margin="147,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.901,-0.297"/>
+        <TextBox x:Name="PhoneNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="303,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
+        <Label Content="Phone Number :" HorizontalAlignment="Left" Margin="147,123,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address :" HorizontalAlignment="Left" Margin="147,177,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rating : " HorizontalAlignment="Left" Margin="147,229,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RatingComboBox" HorizontalAlignment="Left" Margin="303,227,0,0" VerticalAlignment="Top" Width="138" IsEditable="True"/>
+        <Label Content="Description :" HorizontalAlignment="Left" Margin="147,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.234,1.031"/>
+        <TextBox x:Name="DescirptionTextBox" HorizontalAlignment="Left" Height="23" Margin="303,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="200"/>
+        <Button Content="Generate Restraunt Menu" HorizontalAlignment="Left" Margin="558,378,0,0" VerticalAlignment="Top" Width="208" Click="Button_Click"/>
+        <TextBox x:Name="ImageUrlTextBox" HorizontalAlignment="Left" Height="23" Margin="303,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label Content="ImageUrl (Optional) :" HorizontalAlignment="Left" Margin="147,342,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AddressTextBox" HorizontalAlignment="Left" Height="23" Margin="303,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
+        <TextBox x:Name="CategoryTextBox" HorizontalAlignment="Left" Height="23" Margin="303,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" MaxLength="20"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
 
     </Grid>
