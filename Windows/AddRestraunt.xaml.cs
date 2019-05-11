@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Web;
+using System.Net;
 
 namespace otlob.Windows
 {
@@ -34,7 +36,7 @@ namespace otlob.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (AddressTextBox.Text == "" || CategoryTextBox.Text == "" || DescirptionTextBox.Text == "" || RestrauntNameTextBox.Text == "" || PhoneNumberTextBox.Text == "" || RatingComboBox.SelectedIndex == -1)
+            if (AddressTextBox.Text == "" || CategoryTextBox.Text == "" || DescirptionTextBox.Text == "" || RestrauntNameTextBox.Text == "" || PhoneNumberTextBox.Text == "" || ImageUrlTextBox.Text ==""|| RatingComboBox.SelectedIndex == -1)
                 MessageBox.Show("Please Fill All The Data");
             else
             {
@@ -45,7 +47,11 @@ namespace otlob.Windows
             newRestraunt.phoneNumber = PhoneNumberTextBox.Text;
             newRestraunt.rating =Convert.ToInt32(RatingComboBox.SelectedItem.ToString());
             newRestraunt.imagePath = ImageUrlTextBox.Text;
+            
             system.resturants.Add(newRestraunt);
+
+            WebClient client = new WebClient();
+            client.DownloadFile(new Uri(newRestraunt.imagePath), @"..\..\Images\" + newRestraunt.name +".jpg");
             var AddMenu =new otlob.Windows.AddMenu();
             this.Hide();
             AddMenu.ShowDialog();

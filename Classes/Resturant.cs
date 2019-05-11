@@ -55,11 +55,11 @@ namespace otlob.Classes
             if (subscibers.Contains(a))
                 subscibers.Remove(a);
         }
-        public void notifySubscribers(Notification n)
+        public void notifySubscribers(Notification notification)
         {
             for(int i = 0; i < subscibers.Count; i++)
             {
-                subscibers[i].addNotification(n);
+                subscibers[i].addNotification(notification);
             }
         }
     }

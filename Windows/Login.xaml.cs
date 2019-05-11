@@ -26,7 +26,6 @@ namespace otlob.Windows
         public Login()
         {
             InitializeComponent();
-
             system = otlob.Classes.System.getInstance();
         }
 
@@ -37,13 +36,10 @@ namespace otlob.Windows
             LogedAccount = system.loginValidation(EmailTextBox.Text, PasswordTextBox.Password);
             if (LogedAccount != null)
             {
-                
-
                 var profile = new otlob.Windows.MainMenu();
                 this.Hide();
                 profile.ShowDialog();
-                this.Close();
-                
+                this.Close();   
             }
             else
             {

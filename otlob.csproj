@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.1.1345, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.2.5.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\database\App\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
@@ -90,11 +96,17 @@
     <Compile Include="UserControls\MenuSectionDisplayPanel.xaml.cs">
       <DependentUpon>MenuSectionDisplayPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\NotificationCard.xaml.cs">
+      <DependentUpon>NotificationCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AddMenu.xaml.cs">
       <DependentUpon>AddMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddRestraunt.xaml.cs">
       <DependentUpon>AddRestraunt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddRestrauntOffer.xaml.cs">
+      <DependentUpon>AddRestrauntOffer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\EditAccount.xaml.cs">
       <DependentUpon>EditAccount.xaml</DependentUpon>
@@ -119,6 +131,9 @@
     </Compile>
     <Compile Include="Windows\TrackOrder.xaml.cs">
       <DependentUpon>TrackOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ViewNotifications.xaml.cs">
+      <DependentUpon>ViewNotifications.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ViewRestaurantMenu.xaml.cs">
       <DependentUpon>ViewRestaurantMenu.xaml</DependentUpon>
@@ -170,11 +185,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\NotificationCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AddMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\AddRestraunt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddRestrauntOffer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -207,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\TrackOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ViewNotifications.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

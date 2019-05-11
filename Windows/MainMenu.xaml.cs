@@ -59,5 +59,21 @@ namespace otlob.Windows
             login.ShowDialog();
             this.Close();
         }
+
+        private void ViewNotifcations_Click(object sender, RoutedEventArgs e)
+        {
+            var newform = new ViewNotifications();
+            this.Hide();
+            newform.ShowDialog();
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var newform = new AddRestrauntOffer();
+            this.Hide();
+            newform.ShowDialog();
+            this.Close();
+        }
     }
 }

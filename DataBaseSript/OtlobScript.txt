@@ -1,11 +1,20 @@
-/*create table Account
+/*drop table menuitem;
+drop table menusection;
+drop table notification;
+drop table restrauntsubscribers;
+drop table restraunt;
+drop table customer;
+drop table admin;
+drop table account;
+
+create table Account
 (
 ID Number primary key ,
-Email varchar(30) Not Null,
-Name varchar2(30) Not Null,
+Email varchar(70) Not Null,
+Name varchar2(70) Not Null,
 PhoneNumber varchar2(30) NOT NULL,
-PassWord varchar2(30) not null,
-Address varchar2 (30) not null
+PassWord varchar2(70) not null,
+Address varchar2 (70) not null
 );
 create table Admin
 (
@@ -24,16 +33,16 @@ create table Restraunt
 ID number primary key,
 Description varchar2(200) not null,
 Rating Number not null,
-Name varchar2(20) not null,
-PhoneNumber varchar2(20) not null,
-Address varchar2(20)not null,
-ImagePath varchar2(50) not null,
-CategoryType varchar2(20) not null
+Name varchar2(70) not null,
+PhoneNumber varchar2(30) not null,
+Address varchar2(70)not null,
+ImagePath varchar2(200) not null,
+CategoryType varchar2(30) not null
 );
 create table Notification
 (
 ID Number not null,
-Text varchar2(50) not null,
+Text varchar2(200) not null,
 State varchar2(20) not null,
 Account_ID number not null,
 Foreign key(Account_ID) References Account(ID),
@@ -52,7 +61,7 @@ create table RestrauntSubscribers
 create table MenuSection
 (
 ID number not null,
-Name varchar2(20) not null,
+Name varchar2(70) not null,
 Restraunt_ID number not null,
 foreign key (Restraunt_ID) references Restraunt(ID),
 primary key(ID,Restraunt_ID)
@@ -61,9 +70,9 @@ create table MenuItem
 (
   ID number not null,
   Price number not null,
-  ImagePath varchar2(50) not null,
-  Description varchar2(50) not null,
-  Name varchar2(20) not null,
+  ImagePath varchar2(200) not null,
+  Description varchar2(200) not null,
+  Name varchar2(70) not null,
   Rating number not null,
   
   MenuSection_ID number not null,
