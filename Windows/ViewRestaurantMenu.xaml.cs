@@ -33,23 +33,30 @@ namespace otlob.Windows
             if(SearchForRestaurant.targetRestaurant!=null)
             targetRestaurant = SearchForRestaurant.targetRestaurant;
             LoggedAccount.cart.setResturant(targetRestaurant);
-            //LoggedAccount = new Customer();
+            
             fillRestaurantInfoPanel();
             fillSectionsPanels();
         }
         private void fillSectionsPanels()
         {
-            for (int i = 0; i < targetRestaurant.menu.getChildrens().Count; i++)
+            MenuIterator menuIterator = targetRestaurant.menu.getIterator();
+            while(menuIterator.gotNext())
             {
                 MenuSectionDisplayPanel temp = new MenuSectionDisplayPanel();
-                SectionItem section = (SectionItem)targetRestaurant.menu.getChildAt(i);
+
+                SectionItem section = (SectionItem) menuIterator.getCurrentElement();
+                MenuIterator sectionIterator = section.getIterator();
                 temp.SectionNameTextBlock.Text = section.sectionName;
-
-                for (int j = 0; j < section.getChildrens().Count; j++)
-                    temp.MenuItemsPanel.Children.Add(getMenuItemPanel((Classes.MenuItem)section.getChildAt(j)));
-
+                while(sectionIterator.gotNext())
+                {
+                    Classes.MenuItem menuItem = (Classes.MenuItem) sectionIterator.getCurrentElement();
+                    temp.MenuItemsPanel.Children.Add(getMenuItemPanel(menuItem));
+                    sectionIterator.moveToNextElement();
+                }
                 MenuSections.Children.Add(temp);
+                menuIterator.moveToNextElement();
             }
+            
         }
         MenuItemPanel getMenuItemPanel(Classes.MenuItem menuItem)
         {

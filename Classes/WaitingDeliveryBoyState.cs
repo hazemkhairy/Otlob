@@ -11,7 +11,6 @@ namespace otlob.Classes
         public WaitingDeliveryBoyState(Order order) : base(order)
         {
             this.order = order;
-            this.order.setInitDate(DateTime.Now);
 
             StateName = "Waiting Delivering Boy";
         }

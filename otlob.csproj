@@ -76,6 +76,8 @@
     </ApplicationDefinition>
     <Compile Include="Classes\DeliveredOrderState.cs" />
     <Compile Include="Classes\DeliveringOrderToRestaurantState.cs" />
+    <Compile Include="Classes\Iterator.cs" />
+    <Compile Include="Classes\MenuIterator.cs" />
     <Compile Include="Classes\OrderDeliveredState.cs" />
     <Compile Include="Classes\RestaurantPerparingMealState.cs" />
     <Compile Include="Classes\WaitingDeliveryBoyState.cs" />

@@ -10,6 +10,10 @@ namespace otlob.Classes
     {
         public List<MenuComponent> childern{ get; set; }
         
+        public MenuIterator getIterator()
+        {
+            return new MenuIterator(childern);
+        }
         public FullMenu()
         {
             childern = new List<MenuComponent>();

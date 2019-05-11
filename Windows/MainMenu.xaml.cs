@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using otlob.Classes;
+using otlob.Windows;
 
 namespace otlob.Windows
 {
@@ -22,7 +24,7 @@ namespace otlob.Windows
         public MainMenu()
         {
             InitializeComponent();
-            if (Login.LogedAccount.name != "hazem")
+            if (Login.LogedAccount is Admin)
                 addRestaurantBTN.Visibility = Visibility.Hidden;
         }
 
