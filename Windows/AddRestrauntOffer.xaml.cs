@@ -59,7 +59,8 @@ namespace otlob.Windows
                 newNotification.from = temprestraunt;
                 newNotification.readed = false;
                 newNotification.text = temprestraunt.name + " Added "+ DiscountAmount.Text +"% Discount On Section : " + RestrauntSectionsComboBox.SelectedItem.ToString();
-                int id = system.generatenotificationid(Login.LogedAccount);
+                newNotification.id = system.generatenotificationid(Login.LogedAccount);
+                
                 temprestraunt.notifySubscribers(newNotification);
                 for (int i = 0; i < temprestraunt.menu.childern.Count; i++)
                 {

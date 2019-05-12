@@ -9,7 +9,7 @@
     <Grid>
         
         <ScrollViewer Background="Black" DockPanel.Dock="Top" VerticalScrollBarVisibility="auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Margin="0,50,-0.4,269">
-            <StackPanel Name="UnreadNotificationsPanel" Orientation="Vertical" MouseLeftButtonDown="UnreadNotificationsPanel_MouseLeftButtonDown" >
+            <StackPanel Name="UnreadNotificationsPanel" Orientation="Vertical"  >
                 <StackPanel.Effect>
                     <DropShadowEffect/>
                 </StackPanel.Effect>
