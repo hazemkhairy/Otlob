@@ -31,13 +31,13 @@ primary key(ID)
 create table Restraunt
 (
 ID number primary key,
-Description varchar2(200) not null,
+Description varchar2(200) ,
 Rating Number not null,
 Name varchar2(70) not null,
 PhoneNumber varchar2(30) not null,
 Address varchar2(70)not null,
-ImagePath varchar2(200) not null,
-CategoryType varchar2(30) not null
+ImagePath varchar2(200) ,
+CategoryType varchar2(30) 
 );
 create table Notification
 (
@@ -70,8 +70,8 @@ create table MenuItem
 (
   ID number not null,
   Price number not null,
-  ImagePath varchar2(200) not null,
-  Description varchar2(200) not null,
+  ImagePath varchar2(200) ,
+  Description varchar2(200) ,
   Name varchar2(70) not null,
   Rating number not null,
   

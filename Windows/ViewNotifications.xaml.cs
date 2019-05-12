@@ -33,6 +33,8 @@ namespace otlob.Windows
         }
         private void fillNotificationsPanel()
         {
+            ReadNotificationsPanel.Children.Clear();
+            UnreadNotificationsPanel.Children.Clear();
             foreach (Notification notificiation in loggedAccount.notifications)
             {
                 NotificationCard card = new NotificationCard();
@@ -45,10 +47,18 @@ namespace otlob.Windows
 
                 card.RestaurantNameTextBlock.Text = notificiation.from.name;
                 card.NotificationDateTextBlock.Text = notificiation.text;
+                
+                card.notification = notificiation;
+                    card.MouseLeftButtonDown += StackPanel_MouseLeftButtonDown;
                 if (notificiation.readed)
+                {
                     ReadNotificationsPanel.Children.Add(card);
+                }
                 else
+                {
                     UnreadNotificationsPanel.Children.Add(card);
+
+                }
             }
         }
 
@@ -59,13 +69,11 @@ namespace otlob.Windows
             newform.ShowDialog();
             this.Close();
         }
-
-        private void UnreadNotificationsPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void StackPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            selectedNotification = ((
-            targetRestaurant = ((ResturantDisplayPanel)sender).target;
-
-            ViewRestaurantMenu temp = new ViewRestaurantMenu();
+            ((NotificationCard)sender).notification.readed = !((NotificationCard)sender).notification.readed;
+            fillNotificationsPanel();
         }
+        
     }
 }

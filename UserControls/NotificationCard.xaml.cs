@@ -1,4 +1,5 @@
-﻿using System;
+﻿using otlob.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,12 @@ namespace otlob.UserControls
     /// </summary>
     public partial class NotificationCard : UserControl
     {
-
+        public Notification notification;
         public NotificationCard()
         {
             InitializeComponent();
         }
+
+        
     }
 }

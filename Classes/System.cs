@@ -93,19 +93,6 @@ namespace otlob.Classes
                     cmd2.ExecuteNonQuery();
                 }
 
-                for (int j = 0; j < accounts[i].notifications.Count; j++)
-                {
-                    OracleCommand cmd2 = new OracleCommand();
-                    cmd2.Connection = conn;
-                    cmd2.CommandText = "insert into notification values (:not_id,:not_accountid,:not_restrauntid,:not_text,:not_state)";
-                    cmd2.CommandType = CommandType.Text;
-                    cmd2.Parameters.Add("not_id", accounts[i].notifications[j].id);
-                    cmd2.Parameters.Add("not_text", accounts[i].notifications[j].text);
-                    cmd2.Parameters.Add("not_state", accounts[i].notifications[j].readed.ToString());
-                    cmd2.Parameters.Add("not_accountid", accounts[i].id);
-                    cmd2.Parameters.Add("not_restrauntid", accounts[i].notifications[j].from.id);
-                    cmd2.ExecuteNonQuery();
-                }
             }
             for (int i = 0; i < resturants.Count; i++)
             {
@@ -164,6 +151,22 @@ namespace otlob.Classes
                     }
 
 
+                }
+            }
+            for (int i = 0; i < accounts.Count; i++)
+            {
+                for (int j = 0; j < accounts[i].notifications.Count; j++)
+                {
+                    OracleCommand cmd2 = new OracleCommand();
+                    cmd2.Connection = conn;
+                    cmd2.CommandText = "insert into notification values (:not_id,:not_accountid,:not_restrauntid,:not_text,:not_state)";
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.Parameters.Add("not_id", accounts[i].notifications[j].id);
+                    cmd2.Parameters.Add("not_text", accounts[i].notifications[j].text);
+                    cmd2.Parameters.Add("not_state", accounts[i].notifications[j].readed.ToString());
+                    cmd2.Parameters.Add("not_accountid", accounts[i].id);
+                    cmd2.Parameters.Add("not_restrauntid", accounts[i].notifications[j].from.id);
+                    cmd2.ExecuteNonQuery();
                 }
             }
         }
@@ -372,6 +375,8 @@ namespace otlob.Classes
             while (dr.Read())
             {
                 otlob.Classes.Resturant temp = new Resturant();
+                temp.name = dr["name"].ToString();
+                temp.phoneNumber = dr["phonenumber"].ToString();
                 temp.address = dr["address"].ToString();
                 temp.description = dr["Description"].ToString();
                 temp.categoryType = dr["CategoryType"].ToString();

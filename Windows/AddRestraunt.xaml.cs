@@ -47,7 +47,13 @@ namespace otlob.Windows
             newRestraunt.phoneNumber = PhoneNumberTextBox.Text;
             newRestraunt.rating =Convert.ToInt32(RatingComboBox.SelectedItem.ToString());
             newRestraunt.imagePath = ImageUrlTextBox.Text;
-            
+            int id = 0;
+            for (int i = 0; i < system.resturants.Count; i++)
+            {
+                    id = Math.Max(id, system.resturants[i].id);
+            }
+             newRestraunt.id=id + 1;
+             
             system.resturants.Add(newRestraunt);
 
             WebClient client = new WebClient();
