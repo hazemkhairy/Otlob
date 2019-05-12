@@ -8,11 +8,18 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <DockPanel Height="125" LastChildFill="False" Margin="3,3,3,3" Background="White" x:Name="resturantPanel" Cursor="Hand" MouseEnter="resturantPanel_MouseEnter" MouseLeave="resturantPanel_MouseLeave" Width="auto">
-        <Image Height="125" VerticalAlignment="Top" Width="150" x:Name="resturantImage" DockPanel.Dock="Left" Margin="0,0,0,-0.2"/>
-        <TextBlock Height="23" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantName" FontSize="16" FontWeight="Bold"/>
-        <TextBlock Height="23" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantDescription" FontSize="15"/>
-        <TextBlock Height="23" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantCategory" FontSize="14"/>
-        <TextBlock Height="23" TextWrapping="Wrap" Text="Location" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantLocation" FontSize="13"/>
-        <TextBlock Height="23" TextWrapping="Wrap" Text="PhoneNumber" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantPhoneNumber" Opacity="0.6"/>
+        <DockPanel DockPanel.Dock="Left" >
+            
+        <Image Height="115" VerticalAlignment="Top" Width="140" x:Name="resturantImage" Margin="5"/>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Left" Width="auto">
+            
+            <TextBlock Height="23" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantName" FontSize="16" FontWeight="Bold"/>
+            <TextBlock Height="23" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantDescription" FontSize="15"/>
+            <TextBlock Height="23" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantCategory" FontSize="14"/>
+            <TextBlock Height="23" TextWrapping="Wrap" Text="Location" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantLocation" FontSize="13"/>
+            <TextBlock Height="23" TextWrapping="Wrap" Text="PhoneNumber" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="4.6,0,388.6,0" x:Name="resturantPhoneNumber" Opacity="0.6"/>
+        </DockPanel>
+        
     </DockPanel>
 </UserControl>

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:otlob.Windows"
         mc:Ignorable="d"
-        Title="SearchForRestaurant" Height="450" Width="800">
-    <StackPanel x:Name="mypanel">
+        Title="SearchForRestaurant" Height="450" Width="1000">
+    <DockPanel x:Name="mypanel">
         <DockPanel DockPanel.Dock="Top" x:Name="NavigationBar" Panel.ZIndex="1">
 
             <Button DockPanel.Dock="Left" x:Name="BackBTN" Cursor="Hand" Width="120" Margin="5" BorderBrush="AliceBlue"    Panel.ZIndex="1" Click="BackBTN_Click">
@@ -28,28 +28,30 @@
                 </Button.Content>
             </Button>
         </DockPanel>
-        <DockPanel >
+        <DockPanel DockPanel.Dock="Top" >
             <DockPanel Margin="5">
                 <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search Value :" VerticalAlignment="Top"/>
-                <TextBox DockPanel.Dock="Top" x:Name="inputTextBox" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="320" BorderThickness="2" TextChanged="inputTextBox_TextChanged"/>
+                <TextBox DockPanel.Dock="Top" x:Name="inputTextBox" HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="320" BorderThickness="2" TextChanged="inputTextBox_TextChanged"/>
             </DockPanel>
             <DockPanel Margin="5" >
 
                 <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search Method :" VerticalAlignment="Top"/>
-                <ComboBox DockPanel.Dock="Top" x:Name="SearchMethodComboBox" SelectionChanged="SearchMethodComboBox_SelectionChanged" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" Height="30"/>
+                <ComboBox DockPanel.Dock="Top" x:Name="SearchMethodComboBox" SelectionChanged="SearchMethodComboBox_SelectionChanged" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="120"  BorderBrush="Black" BorderThickness="2" />
             </DockPanel>
             
         </DockPanel>
+        <DockPanel DockPanel.Dock="Top">
+            
+            <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Height="320"  >
+                <StackPanel Orientation="Vertical"  Height="auto" Margin="10,10,10,10"  Width="auto" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"  x:Name="displayPanel" DockPanel.Dock="Top">
+                    <StackPanel.Effect>
+                        <DropShadowEffect/>
+                    </StackPanel.Effect>
 
-        <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Height="320"  >
-            <StackPanel Orientation="Vertical"  Height="auto" Margin="10,10,10,10"  Width="auto" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"  x:Name="displayPanel" DockPanel.Dock="Top">
-                <StackPanel.Effect>
-                    <DropShadowEffect/>
-                </StackPanel.Effect>
-
-            </StackPanel>
-        </ScrollViewer>
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
 
 
-    </StackPanel>
+    </DockPanel>
 </Window>

@@ -24,8 +24,8 @@ namespace otlob.Windows
         public MainMenu()
         {
             InitializeComponent();
-            if (Login.LogedAccount is Admin)
-                addRestaurantBTN.Visibility = Visibility.Hidden;
+            if ( !(Login.LogedAccount is Admin ) )
+                AdminPanel.Visibility = Visibility.Hidden;
         }
 
         private void addRestaurantBTN_Click(object sender, RoutedEventArgs e)
@@ -67,13 +67,28 @@ namespace otlob.Windows
             newform.ShowDialog();
             this.Close();
         }
-
+        private void SubscibesBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var newform = new SubscriptionSystem();
+            this.Hide();
+            newform.ShowDialog();
+            this.Close();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var newform = new AddRestrauntOffer();
             this.Hide();
             newform.ShowDialog();
             this.Close();
+        }
+
+        private void AddAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            var newform = new AddAdmin();
+            this.Hide();
+            newform.ShowDialog();
+            this.Close();
+
         }
     }
 }

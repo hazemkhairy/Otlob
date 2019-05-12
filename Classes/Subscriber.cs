@@ -9,7 +9,7 @@ namespace otlob.Classes
     public abstract class Subscriber
     {
         
-        public List<Notification> notifications { get;  }
+        public List<Notification> notifications { get; set; }
         public Subscriber()
         {
             notifications = new List<Notification>();

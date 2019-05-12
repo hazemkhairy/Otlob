@@ -18,12 +18,7 @@
             <TextBlock x:Name="MenuItemPrice" DockPanel.Dock="Top" Height="25"></TextBlock>
             <TextBlock x:Name="MenuItemLikes" DockPanel.Dock="Top" Height="25"></TextBlock>
         </DockPanel>
-        <DockPanel DockPanel.Dock="Left" Margin="10" Cursor="Hand"  >
-            
-            <Image Source="addButton.png" x:Name="addButtonImage" DockPanel.Dock="Top" Margin="10" >
-
-            </Image>
-        </DockPanel>
+        
         
     </DockPanel>
 </UserControl>

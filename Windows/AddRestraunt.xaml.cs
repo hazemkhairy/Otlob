@@ -36,7 +36,7 @@ namespace otlob.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (AddressTextBox.Text == "" || CategoryTextBox.Text == "" || DescirptionTextBox.Text == "" || RestrauntNameTextBox.Text == "" || PhoneNumberTextBox.Text == "" || ImageUrlTextBox.Text ==""|| RatingComboBox.SelectedIndex == -1)
+            if (AddressTextBox.Text == "" || CategoryTextBox.Text == "" || DescirptionTextBox.Text == "" || RestrauntNameTextBox.Text == "" || PhoneNumberTextBox.Text == "" ||  RatingComboBox.SelectedIndex == -1)
                 MessageBox.Show("Please Fill All The Data");
             else
             {

@@ -8,8 +8,8 @@
         Title="ViewRestaurantMenu" Height="auto" Width="auto">
     <DockPanel>
         <DockPanel DockPanel.Dock="Top" x:Name="NavigationBar" Panel.ZIndex="1">
-            
-            <Button DockPanel.Dock="Left" x:Name="BackBTN" Cursor="Hand" Width="80" Margin="5"  Background="#FF0A5EA2" Panel.ZIndex="1" Click="BackBTN_Click">
+
+            <Button DockPanel.Dock="Left" x:Name="BackBTN" Cursor="Hand" Width="120" Margin="5" BorderBrush="AliceBlue"  Panel.ZIndex="1" Click="BackBTN_Click">
                 
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="15" Color="Black" Direction="300" Opacity="1.0" ShadowDepth="3" />
@@ -18,7 +18,7 @@
                     <TextBlock Text="Back" FontSize="16" FontWeight="Bold" Foreground="White" />
                 </Button.Content>
             </Button>
-            <Button DockPanel.Dock="Right"  x:Name="LogOutBTN" HorizontalAlignment="Right"  Cursor="Hand" Width="80" Margin="5" BorderBrush="AliceBlue" Background="#FF0A5EA2" Panel.ZIndex="1" Click="LogOutBTN_Click">
+            <Button DockPanel.Dock="Right"  x:Name="LogOutBTN" HorizontalAlignment="Right"  Cursor="Hand" Width="120" Margin="5" BorderBrush="AliceBlue"  Panel.ZIndex="1" Click="LogOutBTN_Click">
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="15" Color="Black" Direction="300" Opacity="1.0" ShadowDepth="3" />
                 </Button.Effect>
@@ -42,7 +42,7 @@
                 </ScrollViewer>
             </DockPanel>
             <ScrollViewer  Margin="5" DockPanel.Dock="Left">
-                <DockPanel x:Name="CartPanel"  Background="LightBlue" Width="auto">
+                <DockPanel x:Name="CartPanel"  Background="LightBlue" Width="auto" >
                 
                     <TextBlock DockPanel.Dock="Top" Text="CART" FontSize="28" FontFamily="Segoe UI Black" FontWeight="Bold" TextDecorations="Underline" TextAlignment="Center"/>
                         <StackPanel DockPanel.Dock="Top"  x:Name="ItemsInCart">
@@ -51,13 +51,13 @@
                         </StackPanel>
                 
                 
-                    <Button DockPanel.Dock="Bottom"  x:Name="PlaceOrderBTN" Cursor="Hand" Width="auto" Height="50" Margin="5" BorderBrush="AliceBlue" Background="#FF0A5EA2" Click="Button_Click" >
+                    <Button DockPanel.Dock="Bottom"  x:Name="PlaceOrderBTN" Cursor="Hand" Width="auto" Height="70" Margin="5" BorderBrush="AliceBlue" Background="#FF0A5EA2" Click="Button_Click" >
                         <Button.Effect>
                             <DropShadowEffect BlurRadius="15" Color="Black" Direction="300" Opacity="1.0" ShadowDepth="3" />
                         </Button.Effect>
 
                         <Button.Content>
-                            <TextBlock Text="Place Order" FontSize="36" FontWeight="Bold" Foreground="White" />
+                            <TextBlock Text="Place Order" FontSize="36" FontWeight="Bold" Foreground="White" Margin="5" />
                         </Button.Content>
                     </Button>
                 

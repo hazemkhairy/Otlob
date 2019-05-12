@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,11 +75,17 @@ namespace otlob.Windows
         private void fillRestaurantInfoPanel()
         {
             ResturantDisplayPanel display = new ResturantDisplayPanel();
-            display.resturantName.Text = targetRestaurant.name;
-            display.resturantDescription.Text = targetRestaurant.description;
-            display.resturantCategory.Text = targetRestaurant.categoryType;
-            display.resturantPhoneNumber.Text = targetRestaurant.phoneNumber;
-            display.resturantLocation.Text = targetRestaurant.address;
+            display.resturantName.Text = "name = " + targetRestaurant.name;
+            display.resturantDescription.Text = "Description = " +  targetRestaurant.description;
+            display.resturantCategory.Text = "Category = " + targetRestaurant.categoryType;
+            display.resturantPhoneNumber.Text = "Phone Number = " +  targetRestaurant.phoneNumber;
+            display.resturantLocation.Text = "Address = " + targetRestaurant.address;
+
+            BitmapImage myBitmapImage = new BitmapImage();
+            myBitmapImage.BeginInit();
+            myBitmapImage.UriSource = new Uri(Directory.GetCurrentDirectory() + @"\..\..\Images\" + targetRestaurant.name + ".jpg");
+            myBitmapImage.EndInit();
+            display.resturantImage.Source = myBitmapImage;
             RestaurantInfoPanel.Children.Add(display);
 
         }

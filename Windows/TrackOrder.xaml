@@ -7,15 +7,12 @@
         mc:Ignorable="d"
         Title="TrackOrder" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition>
-            </ColumnDefinition>
-            <ColumnDefinition >
-
-            </ColumnDefinition>
-        </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="3*">
+
+            </RowDefinition>
+            <RowDefinition Height="2*">
 
             </RowDefinition>
             <RowDefinition Height="1*">
@@ -33,13 +30,35 @@
         <DockPanel Grid.Row="1"  Grid.ColumnSpan="2">
 
             <DockPanel DockPanel.Dock="Left" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Margin="10">
-                <TextBlock Text="Order State : " ></TextBlock>
-                <TextBlock Text="State"  x:Name="StateTextBox"></TextBlock>
+                <DockPanel DockPanel.Dock="Top" Margin="5">
+                    <TextBlock Text="Order State : " ></TextBlock>
+                    <TextBlock Text="State"  x:Name="StateTextBox"></TextBlock>
+
+                </DockPanel>
+                <DockPanel DockPanel.Dock="Top" Margin="5">
+                    <TextBlock Text="Initial Date : " ></TextBlock>
+                    <TextBlock Text="Unknown"  x:Name="InitalDateTextBox"></TextBlock>
+
+                </DockPanel>
+                <DockPanel DockPanel.Dock="Top" Margin="5">
+                    <TextBlock Text="Final Date : " ></TextBlock>
+                    <TextBlock Text="UnKnown"  x:Name="FinalDateTextBox"></TextBlock>
+
+                </DockPanel>
             </DockPanel>
             <DockPanel DockPanel.Dock="Left" Grid.Column="1">
                 <ProgressBar x:Name="StateProgressBar" Height="20" VerticalAlignment="Center"  Width="auto" Margin="10" />
 
             </DockPanel>
         </DockPanel>
+        <Button Grid.Row="2" DockPanel.Dock="Left" x:Name="BackToMainMenuBTN" Cursor="Hand" Width="300" Margin="5" BorderBrush="AliceBlue"  Panel.ZIndex="1" Click="BackToMainMenuBTN_Click">
+
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="15" Color="Black" Direction="300" Opacity="1.0" ShadowDepth="3" />
+            </Button.Effect>
+            <Button.Content >
+                <TextBlock Text="Back To Main Menu" FontSize="16" FontWeight="Bold" Foreground="White" />
+            </Button.Content>
+        </Button>
     </Grid>
 </Window>

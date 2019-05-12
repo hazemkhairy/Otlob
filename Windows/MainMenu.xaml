@@ -7,13 +7,18 @@
         mc:Ignorable="d"
         Title="MainMenu" Height="450" Width="800">
     <Grid>
-        <Button x:Name="SearchRestaurantBTN" Content="Search Restaurant" HorizontalAlignment="Left" Margin="286,90,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="SearchRestaurantBTN_Click"/>
-        <Button x:Name="EditProfileBTN" Content="Profile" HorizontalAlignment="Left" Margin="286,174,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="EditProfileBTN_Click">
+        <Button x:Name="SearchRestaurantBTN" Content="Search Restaurant" HorizontalAlignment="Left" Margin="118,37,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="SearchRestaurantBTN_Click"/>
+        <Button x:Name="EditProfileBTN" Content="Profile" HorizontalAlignment="Left" Margin="443,37,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="EditProfileBTN_Click">
         </Button>
-        <Button x:Name="addRestaurantBTN" Content="Add Restaurant" HorizontalAlignment="Left" Margin="286,261,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="addRestaurantBTN_Click"/>
         <Button Content="Sign Out" HorizontalAlignment="Left" VerticalAlignment="Top" Width="113" Click="Button_Click_1" Margin="671,10,0,0"/>
-        <Button x:Name="ViewNotifcations" Content="View Notifications" HorizontalAlignment="Left" Margin="286,10,0,0" VerticalAlignment="Top" Width="163" Height="52" Click="ViewNotifcations_Click"/>
-        <Button Content="Add Offer" HorizontalAlignment="Left" Margin="286,344,0,0" VerticalAlignment="Top" Width="163" Height="38" Click="Button_Click"/>
+        <Button x:Name="ViewNotifcations" Content="View Notifications" HorizontalAlignment="Left" Margin="118,144,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="ViewNotifcations_Click"/>
+        <Button x:Name="SubscibesBTN" Content="SubscibesBTN" HorizontalAlignment="Left" Margin="443,144,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="SubscibesBTN_Click"/>
+        <Canvas x:Name="AdminPanel">
+
+            <Button Content="Add Offer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Height="49" Click="Button_Click" Canvas.Left="444" Canvas.Top="251"/>
+            <Button x:Name="AddRestaurantBTN" Content="Add Restaurant" HorizontalAlignment="Left" Margin="118,251,0,0" VerticalAlignment="Top" Width="163" Height="49" Click="addRestaurantBTN_Click"/>
+            <Button x:Name="AddAdmin" Content="Add Admin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Height="49" Click="AddAdmin_Click" Canvas.Left="279" Canvas.Top="324"/>
+        </Canvas>
 
     </Grid>
 </Window>

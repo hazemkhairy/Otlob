@@ -14,13 +14,13 @@
      FontFamily="{DynamicResource MaterialDesignFont}"
         Title="AddRestrauntOffer" Height="450" Width="800">
     <Grid>
-        <ComboBox Name="RestrauntsComboBox" Width ="300" Margin="224,65,269.6,315" SelectionChanged="RestrauntsComboBox_SelectionChanged" Height="40" >
+        <ComboBox Name="RestrauntsComboBox" Width ="300" Margin="224,65,269.6,315" SelectionChanged="RestrauntsComboBox_SelectionChanged" Height="40" BorderBrush="Black" BorderThickness="2" >
 
         </ComboBox>
-        <ComboBox Name="RestrauntSectionsComboBox" Width ="300" Margin="224,142,269.6,237" Height="41" >
+        <ComboBox Name="RestrauntSectionsComboBox" Width ="300" Margin="224,142,269.6,237" Height="40"  BorderBrush="Black" BorderThickness="2" >
 
         </ComboBox>
-        <TextBox Name="DiscountAmount" HorizontalAlignment="Left" Height="35" Margin="224,222,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300"/>
+        <TextBox Name="DiscountAmount" HorizontalAlignment="Left" Height="35" Margin="224,222,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300" BorderBrush="Black" BorderThickness="2" />
         <Button Name="SubmitOffer" Content="Submit Offer" HorizontalAlignment="Left" Margin="224,326,0,0" VerticalAlignment="Top" Width="300" Click="SubmitOffer_Click"/>
         <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="BackButton_Click" Margin="10,10,0,0"/>
         <Label Content="Select Restraunt :" HorizontalAlignment="Left" Margin="61,79,0,0" VerticalAlignment="Top"/>

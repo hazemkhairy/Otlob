@@ -33,6 +33,7 @@ namespace otlob.Windows
 
         private void RestrauntsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            RestrauntSectionsComboBox.Items.Clear();
             for (int i = 0; i < system.resturants.Count; i++)
             {
                 if (RestrauntsComboBox.SelectedItem.ToString() == system.resturants[i].name)
@@ -49,10 +50,7 @@ namespace otlob.Windows
 
         private void SubmitOffer_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < system.accounts.Count; i++)
-            {
-                temprestraunt.addSubscriber(system.accounts[i]);
-            }
+            
             if (RestrauntsComboBox.SelectedIndex != -1 && RestrauntSectionsComboBox.SelectedIndex != -1 && DiscountAmount.Text != "")
             {
                 Notification newNotification = new Notification();

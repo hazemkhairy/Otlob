@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using otlob.Classes;
 using otlob.Windows;
 using otlob.UserControls;
+using System.IO;
+
 namespace otlob.Windows
 {
     /// <summary>
@@ -41,7 +43,9 @@ namespace otlob.Windows
 
                 BitmapImage myBitmapImage = new BitmapImage();
                 myBitmapImage.BeginInit();
-                myBitmapImage.UriSource = new Uri(@"D:\New Otlob\Otlob\Images\"+ notificiation.from.name+".jpg");
+                myBitmapImage.UriSource = new Uri(Directory.GetCurrentDirectory()+ @"\..\..\Images\"+ notificiation.from.name+".jpg");
+
+                
                 myBitmapImage.EndInit();
                 card.RestaurantImageBox.Source = myBitmapImage;
 

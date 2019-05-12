@@ -133,7 +133,7 @@ namespace otlob.Classes
 
                     for (int k = 0; k < sectionItem.childern.Count;k++)
                     {
-                        Classes.MenuItem menuItem = (Classes.MenuItem)sectionItem.childern[j];
+                        Classes.MenuItem menuItem = (Classes.MenuItem)sectionItem.childern[k];
                         OracleCommand cmd4 = new OracleCommand();
                         cmd4.Connection = conn;
                         cmd4.CommandText = "insert into MenuItem values(:mi_id,:mi_price,:mi_imagepath,:mi_description,:mi_name,:mi_rating,:mi_menuSection_id,:mi_restrauntid)";
@@ -420,7 +420,7 @@ namespace otlob.Classes
                 item.description = dr["Description"].ToString();
                 item.imagePath = dr["imagepath"].ToString();
                 item.name = dr["name"].ToString();
-                item.price = Convert.ToInt32(dr["price"].ToString());
+                item.price = Convert.ToDouble(dr["price"].ToString());
                 item.likes  = Convert.ToInt32(dr["rating"].ToString());
                 SectionItems.Add(item);
             }

@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using otlob.Classes;
 using otlob.Windows;
 using otlob.UserControls;
+using System.IO;
+
 namespace otlob.Windows
 {
     /// <summary>
@@ -82,12 +84,21 @@ namespace otlob.Windows
         ResturantDisplayPanel getRestaurantPanel (Resturant resturant)
         {
             ResturantDisplayPanel ret = new ResturantDisplayPanel();
-            ret.resturantName.Text = resturant.name;
-            ret.resturantDescription.Text = resturant.description;
-            ret.resturantCategory.Text = resturant.categoryType;
-            ret.resturantPhoneNumber.Text = resturant.phoneNumber;
-            ret.resturantLocation.Text = resturant.address;
+            ret.resturantName.Text = "name = "+ resturant.name;
+            ret.resturantDescription.Text = "Description = " + resturant.description;
+            ret.resturantCategory.Text = "Category = " + resturant.categoryType;
+            ret.resturantPhoneNumber.Text = "Phone Number = " + resturant.phoneNumber;
+            ret.resturantLocation.Text = "Address = " + resturant.address;
             ret.target = resturant;
+
+            
+            BitmapImage myBitmapImage = new BitmapImage();
+            myBitmapImage.BeginInit();
+            myBitmapImage.UriSource = new Uri(Directory.GetCurrentDirectory() + @"\..\..\Images\" + resturant.name + ".jpg");
+
+
+            myBitmapImage.EndInit();
+            ret.resturantImage.Source = myBitmapImage;
             ret.MouseLeftButtonDown += DockPanel_MouseLeftButtonDown;
             return ret;
         }

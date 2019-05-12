@@ -31,12 +31,13 @@ namespace otlob.Windows
             LoggedAccount = new Customer();
             if (ViewRestaurantMenu.LoggedAccount != null)
                 LoggedAccount = ViewRestaurantMenu.LoggedAccount;
-
+            BackToMainMenuBTN.IsEnabled = false;
             fillOrderList();
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = TimeSpan.FromSeconds(0.1);
             dispatcherTimer.Start();
             StateTextBox.Text = LoggedAccount.order.getState().StateName;
+            InitalDateTextBox.Text = LoggedAccount.order.getInitDate().ToString();
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
@@ -47,6 +48,11 @@ namespace otlob.Windows
 
                 LoggedAccount.order.getState().nextState();
                 StateTextBox.Text = LoggedAccount.order.getState().StateName;
+            }
+            if(StateProgressBar.Value==100)
+            {
+                BackToMainMenuBTN.IsEnabled = true;
+                FinalDateTextBox.Text = LoggedAccount.order.getDeliveredDate().ToString();
             }
             // code goes here
         }
@@ -67,6 +73,14 @@ namespace otlob.Windows
             ret.CartItemTotalPriceTextBlock.Text = "Total Price = " + (orderItem.Getquantity() * orderItem.Getprice()).ToString();
             ret.orderItem = orderItem;
             return ret;
+        }
+
+        private void BackToMainMenuBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new MainMenu();
+            this.Hide();
+            window.ShowDialog();
+            this.Close();
         }
     }
 }

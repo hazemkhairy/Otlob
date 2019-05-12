@@ -1,0 +1,44 @@
+﻿<Window x:Class="otlob.Windows.SubscriptionSystem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:otlob.Windows"
+        mc:Ignorable="d"
+        Title="SubscriptionSystem" Height="450" Width="800">
+    <StackPanel>
+        <DockPanel DockPanel.Dock="Top" x:Name="NavigationBar" Panel.ZIndex="1">
+
+            <Button DockPanel.Dock="Left" x:Name="BackBTN" Cursor="Hand" Width="120" Margin="5" BorderBrush="AliceBlue"  Panel.ZIndex="1" Click="BackBTN_Click">
+
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="15" Color="Black" Direction="300" Opacity="1.0" ShadowDepth="3" />
+                </Button.Effect>
+                <Button.Content >
+                    <TextBlock Text="Back" FontSize="16" FontWeight="Bold" Foreground="White" />
+                </Button.Content>
+            </Button>
+            <Button DockPanel.Dock="Right"  x:Name="LogOutBTN" HorizontalAlignment="Right"  Cursor="Hand" Width="120" Margin="5" BorderBrush="AliceBlue"  Panel.ZIndex="1" Click="LogOutBTN_Click">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="15" Color="Black" Direction="300" Opacity="1.0" ShadowDepth="3" />
+                </Button.Effect>
+
+                <Button.Content>
+                    <TextBlock Text="Log Out" FontSize="16" FontWeight="Bold" Foreground="White" />
+                </Button.Content>
+            </Button>
+        </DockPanel>
+        <TextBlock Text="Subscibed Restaurants :" Margin="10" FontSize="20" FontWeight="Bold" />
+        <ScrollViewer  Height="150">
+            <StackPanel x:Name="SubscibedResturantsPanel">
+                
+            </StackPanel>
+        </ScrollViewer>
+        <TextBlock Text="UnSubscibed Restaurants :" Margin="10" FontSize="20" FontWeight="Bold" />
+        <ScrollViewer  Height="150">
+            <StackPanel x:Name="UnSubscibedResturantsPanel" >
+
+            </StackPanel>
+        </ScrollViewer>
+    </StackPanel>
+</Window>

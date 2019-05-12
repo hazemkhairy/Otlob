@@ -98,6 +98,9 @@
     <Compile Include="UserControls\NotificationCard.xaml.cs">
       <DependentUpon>NotificationCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddAdmin.xaml.cs">
+      <DependentUpon>AddAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AddMenu.xaml.cs">
       <DependentUpon>AddMenu.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,9 @@
     </Compile>
     <Compile Include="Windows\SearchForRestaurant.xaml.cs">
       <DependentUpon>SearchForRestaurant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SubscriptionSystem.xaml.cs">
+      <DependentUpon>SubscriptionSystem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\TrackOrder.xaml.cs">
       <DependentUpon>TrackOrder.xaml</DependentUpon>
@@ -188,6 +194,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\AddAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AddMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -225,6 +235,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\SearchForRestaurant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SubscriptionSystem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
