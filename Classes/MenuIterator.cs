@@ -21,10 +21,7 @@ namespace otlob.Classes
             childrens = menuComponents;
             index = 0;
         }
-        public MenuComponent getCurrentElement()
-        {
-            return childrens[index];
-        }
+        
 
         public bool gotNext()
         {
@@ -34,6 +31,10 @@ namespace otlob.Classes
         public void moveToNextElement()
         {
             index++;
+        }
+        public MenuComponent getCurrentElement()
+        {
+            return childrens[index];
         }
     }
 }

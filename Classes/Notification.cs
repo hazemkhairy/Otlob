@@ -20,12 +20,12 @@ namespace otlob.Classes
             readed = false;
             id = -1;
         }
-        public Notification(string t , Resturant f , bool readee, int i )
+        public Notification(string text , Resturant from , bool readed, int id )
         {
-            text = t;
-            from = f;
-            readed = readee;
-            id = i;
+            this.text = text;
+            this.from = from;
+            this.readed = readed;
+            this.id = id;
             
         }
     }

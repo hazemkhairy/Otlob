@@ -13,10 +13,6 @@ namespace otlob.Classes
         {
             sectionName = "";
         }
-        public SectionItem(string n)
-        {
-            sectionName = n;
-            
-        }
+       
     }
 }

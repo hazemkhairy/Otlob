@@ -10,10 +10,6 @@ namespace otlob.Classes
     {
         public List<MenuComponent> childern{ get; set; }
         
-        public MenuIterator getIterator()
-        {
-            return new MenuIterator(childern);
-        }
         public FullMenu()
         {
             childern = new List<MenuComponent>();
@@ -22,6 +18,11 @@ namespace otlob.Classes
         {
             childern = sections;
         }
+        public MenuIterator getIterator()
+        {
+            return new MenuIterator(childern);
+        }
+        
         public virtual void addChildern(MenuComponent child)
         {
             if(!childern.Contains(child))

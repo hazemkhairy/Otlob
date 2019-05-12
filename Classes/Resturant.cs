@@ -31,20 +31,7 @@ namespace otlob.Classes
             imagePath = "";
             subscibers = new List<Account>();
         }
-        public void updateInfo(Resturant r)
-        {
-            id = r.id;
-            name = r.name;
-            menu = r.menu;
-            description = r.description;
-            rating = r.rating;
-            phoneNumber = r.phoneNumber;
-            address = r.address;
-            categoryType = r.categoryType;
-            imagePath = r.imagePath;
-            subscibers = r.subscibers;
-
-        }
+        
         public void addSubscriber(Account a)
         {
             if(!subscibers.Contains(a))

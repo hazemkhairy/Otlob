@@ -10,12 +10,7 @@ namespace otlob.Classes
     {
         protected Order order;
         public String StateName { get; set; }
-        
-        public State()
-        {
-            order = new Order();
-            StateName = "";
-        }
+
         public State(Order order)
         {
             this.order = order;

@@ -12,6 +12,10 @@ namespace otlob.Classes
 
         protected Resturant resturant;
 
+        public Cart()
+        {
+            items = new List<OrderItem>();
+        }
         public Resturant getResturant()
         {
             return resturant;
@@ -21,14 +25,7 @@ namespace otlob.Classes
         {
             resturant = value;
         }
-        public Cart()
-        {
-            items = new List<OrderItem>();
-        }
-        public Cart(List<OrderItem> item)
-        {
-            items = item;
-        }
+        
         public void addItem(OrderItem  oi)
         {
             for (int i = 0; i < items.Count; i++)
@@ -55,7 +52,7 @@ namespace otlob.Classes
                 }
             }
         }
-        public void removeItemFromCart(OrderItem oi)
+        public void removeFullItemFromCart(OrderItem oi)
         {
             for(int i = 0; i < items.Count; i++)
             {

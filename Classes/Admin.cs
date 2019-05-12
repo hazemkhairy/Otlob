@@ -12,10 +12,7 @@ namespace otlob.Classes
         {
             
         }
-        public Admin(string user, string pass, string n, string e, int i,string phoneNumber) : base(user, pass, n, e ,i , phoneNumber)
-        {
-
-        }
+        
         
     }
 }

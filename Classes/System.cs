@@ -13,7 +13,6 @@ namespace otlob.Classes
         public List<Resturant> resturants{ get; set; }
         public List<Account> accounts{ get; set; }
         public SearchMethod searchMethod{ get; set; }
-        private static int CurrentNotifcationId;
         public AccountFactory accountFactory { get; set; }
         private static System systemInstance;
         OracleConnection conn;
@@ -25,14 +24,8 @@ namespace otlob.Classes
             searchMethod = new SearchByName();
             accountFactory = new AccountFactory();
             conn = new OracleConnection(ordb);
-            CurrentNotifcationId = 0;
             conn.Open();
         }
-        public List<Resturant> searchResturants(string tofind)
-        {
-            return searchMethod.search(this.resturants, tofind);
-        }
-        
         public static System getInstance()
         {
             if (systemInstance == null)
@@ -41,6 +34,12 @@ namespace otlob.Classes
             }
             return systemInstance;
         }
+        public List<Resturant> searchResturants(string tofind)
+        {
+            return searchMethod.search(this.resturants, tofind);
+        }
+        
+        
 
         public bool accountRegistrationValidation(Account newaccount)
         {
@@ -226,11 +225,7 @@ namespace otlob.Classes
             }
             return null;
         }
-        public bool resturantAddvalidation(Resturant r)
-        {
-            // check if entered data valid , check if already exists
-            return true;
-        }
+        
         public void addNewUser(string create)
         {
             accounts.Add(accountFactory.getAccount(create));
